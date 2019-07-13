@@ -1,23 +1,16 @@
 import React from 'react'
 import './App.css'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './pages/Home'
+// import Drink from './pages/Drink'
 
-class App extends React.Component {
-  state = { serverMessage: '' }
-
-  componentDidMount(){
-    fetch('/api/demo')
-      .then(response => response.json())
-      .then(data => this.setState({ serverMessage: data.message }))
-  }
-
-  render(){
-    return (
-      <div id="demo">
-        <Home/>
-      </div>
-    )
-  }
+const App = () => {
+ return (
+   <BrowserRouter>
+     <Route exact path="/" component={Home} />
+     {/* <Route exact path="/" component={Drink} /> */}
+   </BrowserRouter>
+ )
 }
 
 export default App
