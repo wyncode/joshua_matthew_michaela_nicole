@@ -16,8 +16,8 @@ handleSubmit = event => {
 }
     render(){
         return (
-            <div> 
-                <h1>This is search</h1>
+            <div id="search-div"> 
+                {/* <h1>This is search</h1> */}
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         type="search"
@@ -26,7 +26,7 @@ handleSubmit = event => {
                         onChange={this.handleChange}
                         value={this.state.searchWord}
                     />
-                    <button type="submit">Submit</button>
+                    <button id="button" type="submit">Submit</button>
                 </form>
             </div>
         )   // end of return

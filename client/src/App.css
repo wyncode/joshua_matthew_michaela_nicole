@@ -7,6 +7,14 @@
   grid-template-columns: 1fr 1fr;
 }
 
+#makedrink{
+  color: white;
+  margin-top: 5rem;
+  border:white solid 2px
+
+}
+
+
 #demo h1{
   display: grid;
   place-items: center;

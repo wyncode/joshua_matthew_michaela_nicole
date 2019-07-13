@@ -1,4 +1,61 @@
 body {
+
+  background-image: url("./images/cocktail.jpg");
   margin: 0;
-  padding: 0;
+  text-align: center;
 }
+
+nav ul {
+  display: flex;
+  margin-top: 3rem;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: 1rem;
+  border: white solid 2px
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+a.active{
+  color: white;
+}
+
+#movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+.movie {
+  display: grid;
+  place-items: center;
+}
+
+.movie img {
+  width: 250px;
+  height: 370px;
+  object-fit: cover;
+}
+
+input {
+  /* height: 100px; */
+  line-height: 50px;
+  width: 40rem;
+
+}
+
+input[type="text"]{ padding: 60px 30px; 
+  line-height: 28px; }
+
+#search-div{
+  /* line-height:60px; */
+  border: white solid 2px;
+}
+
+/* add media query */
