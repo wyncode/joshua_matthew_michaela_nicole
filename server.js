@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'DEVELOPMENT') {
   })
 }
 
-const port = process.env.PORT || 6060
+const port = process.env.PORT || 8080
 app.listen(
   port,
   () => { console.log(`API listening on port ${port}...`) }
