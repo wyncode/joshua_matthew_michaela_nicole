@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'DEVELOPMENT') {
   require('dotenv').config()
 }
 
@@ -7,14 +7,12 @@ const path = require("path")
 const app = express()
 
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: "Hello from server.js"
-  })
+app.get('/home/:query', (request, response) => {
+  axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.API_KEY}/filter.php?i=${request.params.query}`)
+    .then(cocktailResponse => response.json(cocktailResponse.data.Search || []))
 })
-// END DEMO
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'DEVELOPMENT') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')))
   // Handle React routing, return all requests to React app
