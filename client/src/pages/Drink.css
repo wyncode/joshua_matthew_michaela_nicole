@@ -1,0 +1,74 @@
+.container{
+ font-family: ‘Cinzel’, serif;
+}
+
+.drink{
+ display: flex;
+ text-align: center;
+ margin: 2rem;
+ padding: 2rem;
+ text-align: center;
+ place-items: center auto;
+}
+
+
+.drink img {
+ width: 400px;
+ height: 500px;
+ object-fit: cover;
+ margin: 2rem;
+ border-radius: 5%;
+}
+
+.loader {
+ border: 10px solid #f3f3f3;
+ border-radius: 50%;
+ border-top: 10px solid #AB0000;
+ width: 20px;
+ height: 20px;
+ animation: spin 2s linear infinite;
+ margin:auto;
+ left:0;
+ right:0;
+ top:0;
+ bottom:0;
+ position:fixed;
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+
+nav {
+ border: white solid 3px
+}
+
+nav ul {
+ display: flex;
+ position: absolut;
+ font-size: 30px;
+ margin-top: 0rem;
+ list-style-type: none;
+ height: 122px;
+ opacity: 0.8;
+ background-color:#AB0000 ;
+ /* background-image: linear-gradient(to right top, #750101, #931a17, #b12f2b, #d14240, #f15656); */
+ /* font-weight: lighter */
+
+}
+
+.list {
+ width: 130px;
+ height: 34px;
+ margin-top: 2.7rem;
+ font-family: ‘Philosopher’, sans-serif;
+ /* font-size: 100px; */
+ /* font-weight: bold; */
+ /* font-style: normal;
+ font-stretch: normal; */
+ /* line-height: normal; */
+ /* letter-spacing: 0.02px; */
+ }
+
