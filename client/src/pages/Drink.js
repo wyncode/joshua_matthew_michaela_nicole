@@ -22,10 +22,5 @@ componentDidMount(){
   }
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 5d604e7c8262edf82ffd0bd704702a74fe46d392
 export default MyDrink
 
