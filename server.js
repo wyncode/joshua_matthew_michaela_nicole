@@ -8,18 +8,6 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get("/home/:query", (request, response) => {
-  axios
-    .get(
-      `https://www.thecocktaildb.com/api/json/v2/${
-        process.env.API_KEY
-      }/filter.php?i=${request.params.query}`
-    )
-    .then(cocktailResponse =>
-      response.json(cocktailResponse.data.Search || [])
-    );
-});
 app.get(`/drinks/:item`, (request, response) => {
   axios
     .get(

@@ -1,4 +1,70 @@
 body {
-  margin: 0;
-  padding: 0;
+   margin: 0;
+   padding: 0;
+}
+#search {
+   display: grid;
+   place-items: center;
+}
+#DrinkResults {
+   display: grid;
+   place-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   grid-gap: 10px;
+   margin: 25px 0;
+   padding: 5px;
+   /* background-color: rgb(241, 241, 241); */
+   /* border: 2px solid black; */
+   /* border-radius: 25px; */
+}
+
+.Drink {
+   display: grid;
+   place-items: center;
+   margin: 5px;
+   position: relative;
+   text-align: center;
+   color: white;
+}
+.Drink h4 {
+   position: absolute;
+   width: 100%;
+   font-size: 1.5rem;
+   padding: 2px 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+.Drink img {
+   width: 250px;
+   height: 350px;
+   object-fit: cover;
+   border-radius: 15px;
+}
+#input-wrapper {
+   display: flex;
+}
+.inputs {
+   margin: 5px;
+   padding: 5px;
+   display: flex;
+}
+
+#submit {
+   width: 50px;
+   display: block;
+   margin: 10px auto;
+}
+
+h2 {
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid #000;
+   line-height: 0.1em;
+   margin: 50px 0 20px;
+}
+
+h2 span {
+   background: #f9f7f6;
+   padding: 0 10px;
+   font-family: 'Julius Sans One', sans-serif;
 }
