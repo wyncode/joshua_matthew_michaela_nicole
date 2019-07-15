@@ -1,12 +1,13 @@
 
 /* Home page styling */
 
-#container{
+#home-container{
   border: blue solid 5px;
   background-image: url("./images/cocktail.jpg");
   background-repeat:no-repeat;
   background-size: cover;
   width: 100vw;
+  height: 100vh;
   /* height: 100vh; */
   margin: 0;
   text-align: center
@@ -76,45 +77,6 @@
 #button:hover {
   transform: scale(1.1);
 }
-
-
-/* #demo{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-
-/* .lorem{
-  margin-top: 5rem;
-  margin-left:5 rem;
-  color: grey;
-  border: grey;
-  display: flex;
-} */
-  /* margin-top: 5rem; */
-  /* border:white solid 2px */
-
-/* 
-#demo h1{
-  display: grid;
-  place-items: center;
-
-} */
-
-/* .container{
-  display: flex;
-  border: red;
-} */
-
-/* #box1 {
-  display: flex;
-  border: red;
-} */
-
-
-/* END DEMO */
-
 
 .container{
   font-family: 'Cinzel', serif;

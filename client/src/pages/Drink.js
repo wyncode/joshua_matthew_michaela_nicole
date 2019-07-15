@@ -19,12 +19,5 @@ componentDidMount(){
 }
 
 
-<form>
-  <input
-    type=""
-</form>
-
-
-
 export default MyDrink
 

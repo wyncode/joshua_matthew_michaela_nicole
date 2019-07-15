@@ -5,7 +5,7 @@ const Home = () => {
   return( 
         //  <React.Fragment>
 
-          <div id="container">
+          <div id="home-container">
 
               <div id="Lorem-ipsum-dolor-am">
                 Lorem ipsum dolor amet, consectetur
