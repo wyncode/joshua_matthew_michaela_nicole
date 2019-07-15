@@ -13,16 +13,14 @@ componentDidMount(){
   render(){
     console.log('rendering', this.state.drink)
     return(
-      <h1>hiiiiii</h1> 
+      <div>
+      <h3>My Drink</h3>
+      <h3>Ingredients</h3>
+      <h3>Directions</h3> 
+      </div>
     )
   }
 }
-
-
-<form>
-  <input
-    type=""
-</form>
 
 
 
