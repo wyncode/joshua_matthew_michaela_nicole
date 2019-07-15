@@ -1,12 +1,11 @@
 const axios = require('axios');
+const express = require('express');
+const path = require('path');
+const app = express();
 
 if (process.env.NODE_ENV !== 'DEVELOPMENT') {
   require('dotenv').config();
 }
-const axios = require('axios');
-const express = require('express');
-const path = require('path');
-const app = express();
 
 app.get(`/drinks/:item`, (request, response) => {
   axios

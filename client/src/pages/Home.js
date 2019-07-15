@@ -3,7 +3,7 @@ import Search from '../components/Search';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Foo = () => {
+const Welcome = () => {
   return (
     //  <React.Fragment>
 
@@ -45,7 +45,7 @@ class Home extends React.Component {
     console.log(this.state.drinks);
     return (
       <div>
-        <Foo />
+        <Welcome />
         <div id="search-container">
           <Search findDrinks={this.findDrinks} />
           <h2 id="divider">
@@ -66,3 +66,5 @@ class Home extends React.Component {
     );
   }
 }
+
+export default Home;
