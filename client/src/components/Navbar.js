@@ -11,9 +11,6 @@ const Navbar = () => (
           <img src={drink1} id="drink1" alt="drink-icon" />{' '}
         </NavLink>
       </li>
-      {/* <li className="list"><NavLink exact to="/Ingredients">Ingredients</NavLink></li>
-            <li className="list"><NavLink exact to="/About-US">About us</NavLink></li> */}
-      {/* <li className="list"><NavLink exact to="/Home">Home</NavLink></li> */}
       <li className="list">
         <NavLink exact to="/Random-drink">
           Random Drink

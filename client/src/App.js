@@ -10,7 +10,6 @@ import RandomDrink from './pages/RandomDrink';
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <Route exact path="/random-drink" component={RandomDrink} />
       <Route exact path="/" component={Home} />
       <Route exact path="/MyDrink" component={MyDrink} />
