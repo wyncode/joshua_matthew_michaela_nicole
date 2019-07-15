@@ -13,7 +13,7 @@ const Navbar = () => (
             <li className="list"><NavLink exact to ="/Random-drink">Random Drink</NavLink></li>
             {/* <li className="list"><NavLink exact to="/Sign-in">Sign in</NavLink></li> */}
         </ul>
-
+        
     </nav>
   )
 export default Navbar

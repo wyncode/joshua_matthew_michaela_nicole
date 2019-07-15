@@ -67,23 +67,6 @@ a.active{
   color:red;
 }
 
-#movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-}
-
-.movie {
-  display: grid;
-  place-items: center;
-}
-
-.movie img {
-  width: 250px;
-  height: 370px;
-  object-fit: cover;
-}
-
 input {
   /* height: 100px; */
   line-height: 50px;
@@ -94,9 +77,4 @@ input {
 input[type="text"]{ padding: 60px 30px; 
   line-height: 28px; }
 
-#search-div{
-  /* line-height:60px; */
-  border: white solid 2px;
-}
 
-/* add media query */

@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV !== 'DEVELOPMENT') {
   require('dotenv').config()
 }
-
+const axios = require('axios')
 const express = require("express")
 const path = require("path")
 const app = express()
@@ -11,6 +11,14 @@ app.get('/home/:query', (request, response) => {
   axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.API_KEY}/filter.php?i=${request.params.query}`)
     .then(cocktailResponse => response.json(cocktailResponse.data.Search || []))
 })
+
+
+
+app.get('/random-drink', (request, response) => {
+  axios.get(`https://www.thecocktaildb.com/api/json/v2/${process.env.API_KEY}/random.php`)
+    .then(cocktailResponse => response.json(cocktailResponse.data))
+})
+
 
 if (process.env.NODE_ENV === 'DEVELOPMENT') {
   // Serve any static files
