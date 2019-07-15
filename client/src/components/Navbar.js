@@ -5,14 +5,19 @@ import drink1 from '../images/drink1.png';
 const Navbar = () => (
   <nav>
     <ul>
-      <li className="list">
+      <li>
         {' '}
-        <NavLink exact to="/Logo">
+        <NavLink className="nav-item" exact to="/">
           <img src={drink1} id="drink1" alt="drink-icon" />{' '}
         </NavLink>
       </li>
-      <li className="list">
-        <NavLink exact to="/Random-drink">
+      <li>
+        <NavLink className="nav-item" exact to="/">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className="nav-item" exact to="/Random-drink">
           Random Drink
         </NavLink>
       </li>

@@ -2,7 +2,7 @@
 /* Home page styling */
 
 #home-container{
-  border: blue solid 5px;
+  border: white solid 0.5px;
   background-image: url("./images/cocktail.jpg");
   background-repeat:no-repeat;
   background-size: cover;
@@ -16,10 +16,10 @@
 
 #Lorem-ipsum-dolor-am {
   display: flex;
-  border: yellow solid 3px;
+  /* border: yellow solid 3px; */
   display: flex;
-  margin-top: 7rem;
-  margin-left: 6rem;
+  margin-top: 11rem;
+  margin-left: 6.5rem;
   text-align: left;
   max-width: 550px;
   min-width: 300px;
@@ -36,12 +36,12 @@
 
 #Lorem-ipsum-dolor-si {
   display: flex;
-  border: yellow solid 3px;
+  /* border: yellow solid 3px; */
   display: flex;
   margin-top: 2rem;
-  margin-left: 6rem;
+  margin-left: 6.5rem;
   text-align: left;
-  max-width: 991px;
+  max-width: 500px;
   min-width: 300px;
   height: 107px;
   font-family: Philosopher;
@@ -55,12 +55,12 @@
 }
 
 #button-box {
-  border: yellow solid 3px;
+  /* border: yellow solid 3px; */
   min-width: 300px;
   display: flex;
   text-align: left;
   margin-top: 2rem;
-  margin-left: 6rem;
+  margin-left: 7rem;
 }
 
 #home-button {
@@ -76,6 +76,8 @@
 
 #home-button:hover {
   transform: scale(1.1);
+  color: black;
+  border: 2px solid #AB0000;
 }
 
 .container{
@@ -122,7 +124,7 @@
 
 
 nav {
-  border: white solid 3px
+  /* border: white solid 3px */
 }
 
 nav ul {
@@ -134,9 +136,6 @@ nav ul {
   height: 122px;
   opacity: 0.8;
   background-color:#AB0000 ;
-  /* background-image: linear-gradient(to right top, #750101, #931a17, #b12f2b, #d14240, #f15656); */
-  /* font-weight: lighter */
-
 }
 
 .list {
@@ -144,12 +143,6 @@ nav ul {
   height: 34px;
   margin-top: 2.7rem;
   font-family: 'Philosopher', sans-serif;
-  /* font-size: 100px; */
-  /* font-weight: bold; */
-  /* font-style: normal;
-  font-stretch: normal; */
-  /* line-height: normal; */
-  /* letter-spacing: 0.02px; */
   }
 
 

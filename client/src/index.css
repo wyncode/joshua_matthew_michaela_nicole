@@ -3,9 +3,17 @@
   padding: 0;
 } */
 nav {
-  border: green solid 5px;
+  /* border: green solid 5px; */
   width: 100vw;
-  background-color: #ab0000;
+  position: fixed;
+  /* opacity: 0.78; */
+}
+
+.nav-item {
+  font-size: 24px;
+  color: white;
+  padding: 13px
+
 }
 
 #search {
@@ -77,33 +85,25 @@ h2 span {
 
 nav ul {
   display: flex;
-  position: absolut;
-  font-size: 30px;
-  margin-top: 0rem;
   list-style-type: none;
   height: 122px;
   opacity: 0.8;
   background-color: #ab0000;
-  /* background-image: linear-gradient(to right top, #750101, #931a17, #b12f2b, #d14240, #f15656); */
-  /* font-weight: lighter */
 }
 
-.list {
-  width: 130px;
-  height: 34px;
-  margin-top: 2.7rem;
+nav ul li {
+  width: auto;
+  margin-top: 4rem;
+  /* background-color: yellow; */
   font-family: 'Philosopher', sans-serif;
-  /* font-size: 100px; */
-  /* font-weight: bold; */
-  /* font-style: normal;
-  font-stretch: normal; */
-  /* line-height: normal; */
-  /* letter-spacing: 0.02px; */
+  font-size:40px;
+  padding: 0px
+
 }
 
 #drink1 {
-  height: 125px;
-  width: 125px;
+  height: 87px;
+  width: 87px;
   background-color: white;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
@@ -111,17 +111,18 @@ nav ul {
 
 #drink1:hover {
   transform: scale(1.1);
+  border: 2px solid #ab0000;
+  
 }
 
 a {
   color: white;
-  opacity: 1;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 a.active {
-  color: red;
+  color: white;
 }
 
 input {
