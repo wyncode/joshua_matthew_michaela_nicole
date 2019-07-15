@@ -24,8 +24,9 @@ app.get('/random-drink', (request, response) => {
 
 
 app.get('/pages/Drink/:id', (request, response) => {
-  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/${process.env.API_KEY}&i=${request.params.id}`)
-    .then(cocktailResponse => response.json(cocktailResponse.data)) 
+  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${request.params.id}`)
+    .then(cocktailResponse => response.json(cocktailResponse.data))
+    .catch(error => console.log(error))
 })
 
 
