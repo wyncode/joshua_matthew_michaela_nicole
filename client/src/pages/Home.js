@@ -2,12 +2,14 @@ import React from 'react';
 import Search from '../components/Search';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Welcome = () => {
   return (
     //  <React.Fragment>
 
     <div id="container">
+      <Navbar />
       <div id="Lorem-ipsum-dolor-am">Lorem ipsum dolor amet, consectetur</div>
 
       <div id="Lorem-ipsum-dolor-si">
@@ -38,7 +40,9 @@ class Home extends React.Component {
 
   findDrinks = searchWord => {
     // console.log("finding drinks", this);
-    axios.get(`/drinks/${searchWord}`).then(response => this.setState({ drinks: response.data.drinks }));
+    axios.get(`/drinks/${searchWord}`).then(({ data }) => {
+      this.setState({ drinks: Array.isArray(data.drinks) ? data.drinks : [] });
+    });
   };
 
   render() {
