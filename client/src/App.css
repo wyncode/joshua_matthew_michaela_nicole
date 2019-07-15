@@ -7,7 +7,7 @@
   background-repeat:no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 732px;
   /* height: 100vh; */
   margin: 0;
   text-align: center
@@ -63,18 +63,18 @@
   margin-left: 6rem;
 }
 
-#button {
+#home-button {
   border-radius: 30.5px;
   font-family: Philosopher;
   font-size: 18px;
   background-color: white;
   width: 150px;
   font-style: philosopher;
-  /* text-align: center; */
+  transition: all 0.2s ease-in-out;
   height:50px;
 }
 
-#button:hover {
+#home-button:hover {
   transform: scale(1.1);
 }
 
