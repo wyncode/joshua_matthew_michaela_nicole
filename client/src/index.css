@@ -117,7 +117,7 @@ nav ul li {
 
 #drink1:hover {
   transform: scale(1.1);
-  border: 2px solid #ab0000;
+  border: 3px solid #ab0000;
   
 }
 
@@ -142,3 +142,18 @@ input[type='text'] {
   line-height: 28px;
 }
 
+/* syling social icons */
+
+#twitter {
+  width: 25px;
+  height: 25px\
+}
+#facebook {
+  width: 25px;
+  height: 25px
+}
+
+#instagram {
+  width: 25px;
+  height: 25px
+}
