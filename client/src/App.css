@@ -3,6 +3,7 @@
 
 #home-container{
   border: white solid 0.5px;
+  /* border: yellow solid 3px; */
   background-image: url("./images/cocktail.jpg");
   background-repeat:no-repeat;
   background-size: cover;
@@ -18,14 +19,14 @@
   display: flex;
   /* border: yellow solid 3px; */
   display: flex;
-  margin-top: 11rem;
+  margin-top: 4rem;
   margin-left: 6.5rem;
   text-align: left;
   max-width: 550px;
   min-width: 300px;
   height: 156px;
   font-family: sans-serif;
-  font-size: 60px;
+  font-size: 57px;
   font-weight: light;
   font-style: normal;
   font-stretch: normal;
@@ -38,7 +39,7 @@
   display: flex;
   /* border: yellow solid 3px; */
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   margin-left: 6.5rem;
   text-align: left;
   max-width: 500px;
@@ -80,10 +81,6 @@
   border: 2px solid #AB0000;
 }
 
-.container{
-  font-family: 'Cinzel', serif;
-}
-
 .drink{
   display: flex;
   text-align: center;
@@ -91,6 +88,8 @@
   padding: 2rem;
   text-align: center;
   place-items: center auto;
+  filter: drop-shadow(20px 7px 4px black);
+  
 }
 
 
@@ -122,22 +121,6 @@
   100% { transform: rotate(360deg); }
 }
 
-
-nav {
-  /* border: white solid 3px */
-}
-
-nav ul {
-  display: flex;
-  position: absolut;
-  font-size: 30px;
-  margin-top: 0rem;
-  list-style-type: none;
-  height: 122px;
-  opacity: 0.8;
-  background-color:#AB0000 ;
-}
-
 .list {
   width: 130px;
   height: 34px;
@@ -145,4 +128,50 @@ nav ul {
   font-family: 'Philosopher', sans-serif;
   }
 
+  /* random drink page */
 
+  .random-container{
+    margin-top:-1rem;
+    /* border: red solid 5spx; */
+    display: block;
+    font-family: 'Cinzel', serif;
+    background-image:  url("./images/bar-drinks.jpeg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vw;
+  }
+
+  /* #random-title  */
+    /* margin-top: rem; */
+    /* text-align: center;
+    color: white;
+    margin: 5rem */
+  /* */
+
+  h1 { 
+    margin-top: 5.0rem;
+    text-align: center;
+    border: white;
+    padding: 3px;
+    color: white
+  }
+  
+  #drinkInfo {
+    /* border:white solid 3px; */
+    color: white;
+  }
+
+  #random-image {
+  /* border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px; */
+    /* border: white solid 3px; */
+  }
+
+  .tester {
+    padding: 1px;
+    height: 75px;
+  }
+  .rand-ins {
+    color: white;
+  }
