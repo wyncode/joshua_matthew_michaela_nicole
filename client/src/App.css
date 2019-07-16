@@ -33,13 +33,14 @@
   line-height: 1.2;
   letter-spacing: 0.04px;
   color: #ffffff;
+  opacity: 0.8
 }
 
 #Lorem-ipsum-dolor-si {
   display: flex;
   /* border: yellow solid 3px; */
   display: flex;
-  margin-top: 1.6rem;
+  margin-top: 4rem;
   margin-left: 6.5rem;
   text-align: left;
   max-width: 500px;
@@ -53,6 +54,7 @@
   line-height: 1.46;
   letter-spacing: 0.01px;
   color: #ffffff;
+  opacity: 0.7
 }
 
 #button-box {
@@ -65,7 +67,7 @@
 }
 
 #home-button {
-  border-radius: 30.5px;
+  border-radius: 05.5px;
   font-family: Philosopher;
   font-size: 18px;
   background-color: white;
@@ -78,7 +80,7 @@
 #home-button:hover {
   transform: scale(1.1);
   color: black;
-  border: 2px solid #AB0000;
+  border: 3px solid #AB0000;
 }
 
 .drink{
