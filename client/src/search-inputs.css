@@ -42,7 +42,7 @@
 
 .input__label {
   display: inline-block;
-  float: right;
+  /* float: right; */
   padding: 0 1em;
   width: 40%;
   color: #696969;
@@ -111,7 +111,7 @@
   font-weight: 400;
   color: #b5b5b5;
 }
-
+/* animates the label above input */
 .input__label-content--chisato::after {
   content: attr(data-content);
   position: absolute;
@@ -122,7 +122,7 @@
 }
 
 /* changes border color on focus */
-.input__field--chisato:focus,
+.input__field--chisato.active,
 .input--filled .input__field--chisato {
   border-color: #da6484;
 }
@@ -137,14 +137,14 @@
 }
 
 /* adds label to top of input on focus */
-.input__field--chisato:focus + .input__label--chisato,
+.input__field--chisato.active + .input__label--chisato,
 .input--filled .input__label--chisato {
   -webkit-animation: anim-chisato-1 0.25s forwards;
   animation: anim-chisato-1 0.25s forwards;
 }
 
 /* changes font color on focus */
-.input__field--chisato:focus + .input__label--chisato .input__label-content--chisato,
+.input__field--chisato.active + .input__label--chisato .input__label-content--chisato,
 .input--filled .input__label-content--chisato {
   -webkit-animation: anim-chisato-2 0.25s forwards ease-in;
   animation: anim-chisato-2 0.25s forwards ease-in;
