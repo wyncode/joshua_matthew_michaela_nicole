@@ -60,6 +60,7 @@ class RandomDrinks extends React.Component {
                             {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
                             <h3>Instructions</h3>
                             <p>{drink.strInstructions}</p>
+                             <button>Randomize</button>
                             </div>
 
                         </div>
