@@ -10,7 +10,7 @@ const Welcome = () => {
 
           <div id="home-container">
 
-           <Navbar/>
+           <Navbar id="random-nav"/>
       
       <div id="Lorem-ipsum-dolor-am">
         Lorem ipsum dolor sit amet,consectetur
