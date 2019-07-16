@@ -49,11 +49,9 @@ class MyDrink extends React.Component {
             <div className="drink"></div>
           </div>  
 
-
             <div id="drinkPhoto">
               <img src= {drink.strDrinkThumb} />
             </div>  
-
 
             <div id="drinkInfo">
                 <h3>Ingredients</h3>
