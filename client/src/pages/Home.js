@@ -6,8 +6,6 @@ import Navbar from '../components/Navbar';
 
 const Welcome = () => {
   return (
-    //  <React.Fragment>
-
     <div id="container">
       <Navbar />
       <div id="Lorem-ipsum-dolor-am">Lorem ipsum dolor amet, consectetur</div>
@@ -18,19 +16,7 @@ const Welcome = () => {
 
       <div id="button-box">
         <button id="button">Lorem ipsum</button>
-        {/* Lorem ipsum dolor sit amet,consectetur
-                adipisiging elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore */}
       </div>
-
-      {/* <div id="button-box">
-              <button type="button" id="button">Lorem ipsum</button>
-              </div> */}
-
-      {/* <div id="button-box">
-
-                <button type="button" id="button">Lorem ipsum</button>
-              </div> */}
     </div>
   );
 };
@@ -55,10 +41,10 @@ class Home extends React.Component {
           <h2 id="divider">
             <span>Your Cocktails</span>
           </h2>
-          <div id="DrinkResults">
+          <div id="drink-results">
             {this.state.drinks.map(drink => (
               <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>
-                <div className="Drink">
+                <div className="individual-drink">
                   <h4>{drink.strDrink}</h4>
                   <img src={drink.strDrinkThumb} alt={drink.strDrink} />
                 </div>

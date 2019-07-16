@@ -22,16 +22,16 @@ class SearchDrinks extends React.Component {
     // resetting the ingredients after submit
     this.setState({ alcohol: '', mixer: '', garnish: '' });
   };
+
   render() {
     console.log(this.props);
     return (
       <div id="search">
-        <h1>This is search</h1>
+        <h1>search</h1>
         <form onSubmit={this.handleSubmit}>
           <section id="input-wrapper">
             <span className="input input--chisato">
               <input
-                list="browsers"
                 className="input__field input__field--chisato"
                 type="text"
                 id="input-13"
@@ -44,7 +44,7 @@ class SearchDrinks extends React.Component {
                 required
               />
 
-              <label className="input__label input__label--chisato" for="input-13">
+              <label className="input__label input__label--chisato">
                 <span className="input__label-content input__label-content--chisato" data-content="Alcohol">
                   Alcohol
                 </span>
@@ -63,7 +63,7 @@ class SearchDrinks extends React.Component {
                 pattern="[a-zA-Z ]{1,15}"
                 required
               />
-              <label className="input__label input__label--chisato" for="input-13">
+              <label className="input__label input__label--chisato">
                 <span className="input__label-content input__label-content--chisato" data-content="Mixer">
                   Mixer
                 </span>
@@ -75,21 +75,24 @@ class SearchDrinks extends React.Component {
                 type="text"
                 id="input-13"
                 name="garnish"
-                // type="search"
                 autoComplete="off"
                 onChange={this.handleIngredients('garnish')}
                 value={this.state.garnish}
                 pattern="[a-zA-Z ]{1,15}"
               />
-              <label className="input__label input__label--chisato" for="input-13">
+              <label
+                className={`input__label input__label--chisato ${
+                  this.state.garnish.length > 0 ? 'input--filled input__label-content--chisato--after' : ''
+                }`}
+              >
                 <span className="input__label-content input__label-content--chisato" data-content="Garnish">
                   Garnish
                 </span>
               </label>
             </span>
           </section>
-          <div id="submit">
-            <button type="submit">Submit</button>
+          <div class="submit">
+            <button type="submit">Drink!</button>
           </div>
         </form>
       </div>
