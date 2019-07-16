@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
       <Route exact path="/random-drink" component={RandomDrink} />
       <Route exact path="/" component={Home} />
-      <Route exact path="/MyDrink" component={MyDrink} />
+      <Route path="/MyDrink/:id" component={MyDrink} />
       {/* <Route exact path="/" component={Drink} /> */}
     </BrowserRouter>
   );
