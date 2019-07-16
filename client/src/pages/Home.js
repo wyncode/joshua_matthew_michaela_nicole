@@ -13,11 +13,13 @@ const Welcome = () => {
            <Navbar id="random-nav"/>
       
       <div id="Lorem-ipsum-dolor-am">
-        Lorem ipsum dolor sit amet,consectetur
+        Spruce your date night. Make cocktails like a pro.
       </div>
 
       <div id="Lorem-ipsum-dolor-si">
-        Lorem ipsum dolor sit amet,consectetur adipisiging elit, sed do eiusmod tempor incididunt ut labore et dolore
+        Show your special someone your drink making skills. 
+        Date night will never be the same. Go ahead. Tell us.
+        What's in your fridge?
       </div>
 
       <div id="button-box">
