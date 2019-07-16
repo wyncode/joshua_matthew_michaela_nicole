@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import './Drink.css';
 import { startCase } from '../utils';
 
 class MyDrink extends React.Component {
