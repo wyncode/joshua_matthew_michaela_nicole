@@ -1,36 +1,45 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
-}
+} */
 nav {
-  border: green solid 5px;
+  /* border: green solid 5px; */
   width: 100vw;
-  background-color: #ab0000;
+  /* border: white solid 2px; */
+  margin-top: 5px;
+  /* position: fixed; */
+  /* opacity: 0.78; */
+}
+
+.nav-item {
+  font-size: 24px;
+  color: white;
+  padding: 13px;
 }
 
 nav ul {
   display: flex;
-  position: absolut;
-  font-size: 30px;
-  margin-top: 0rem;
   list-style-type: none;
-  height: 122px;
+  height: 90px;
   opacity: 0.8;
+  margin-top: -0.4rem;
+  /* border: blue solid 3px; */
   background-color: #ab0000;
-  /* background-image: linear-gradient(to right top, #750101, #931a17, #b12f2b, #d14240, #f15656); */
-  /* font-weight: lighter */
 }
 
-.list {
-  width: 130px;
-  height: 34px;
-  margin-top: 2.7rem;
+nav ul li {
+  width: auto;
+  margin-top: 2rem;
+  /* border: yellow solid 3px; */
+  /* background-color: yellow; */
   font-family: 'Philosopher', sans-serif;
+  font-size: 40px;
+  padding: 0px;
 }
 
 #drink1 {
-  height: 125px;
-  width: 125px;
+  height: 87px;
+  width: 87px;
   background-color: white;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
@@ -38,17 +47,17 @@ nav ul {
 
 #drink1:hover {
   transform: scale(1.1);
+  border: 3px solid #ab0000;
 }
 
 a {
   color: white;
-  opacity: 1;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 a.active {
-  color: red;
+  color: white;
 }
 
 /* input {
@@ -60,3 +69,19 @@ input[type='text'] {
   padding: 60px 30px;
   line-height: 28px;
 } */
+
+/* syling social icons */
+
+#twitter {
+  width: 25px;
+  height: 25px\;
+}
+#facebook {
+  width: 25px;
+  height: 25px;
+}
+
+#instagram {
+  width: 25px;
+  height: 25px;
+}

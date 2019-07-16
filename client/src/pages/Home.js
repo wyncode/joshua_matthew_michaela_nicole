@@ -7,15 +7,19 @@ import Navbar from '../components/Navbar';
 const Welcome = () => {
   return (
     <div id="container">
-      <Navbar />
-      <div id="Lorem-ipsum-dolor-am">Lorem ipsum dolor amet, consectetur</div>
+      <div id="home-container">
+        <Navbar id="random-nav" />
 
-      <div id="Lorem-ipsum-dolor-si">
-        Lorem ipsum dolor sit amet,consectetur adipisiging elit, sed do eiusmod tempor incididunt ut labore et dolore
-      </div>
+        <div id="Lorem-ipsum-dolor-am">Spruce your date night. Make cocktails like a pro.</div>
 
-      <div id="button-box">
-        <button id="button">Lorem ipsum</button>
+        <div id="Lorem-ipsum-dolor-si">
+          Show your special someone your drink making skills. Date night will never be the same. Go ahead. Tell us.
+          What's in your fridge?
+        </div>
+
+        <div id="button-box">
+          <button id="home-button">Lorem ipsum</button>
+        </div>
       </div>
     </div>
   );
