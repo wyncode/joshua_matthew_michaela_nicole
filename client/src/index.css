@@ -2,3 +2,61 @@ body {
   margin: 0;
   padding: 0;
 }
+nav {
+  border: green solid 5px;
+  width: 100vw;
+  background-color: #ab0000;
+}
+
+nav ul {
+  display: flex;
+  position: absolut;
+  font-size: 30px;
+  margin-top: 0rem;
+  list-style-type: none;
+  height: 122px;
+  opacity: 0.8;
+  background-color: #ab0000;
+  /* background-image: linear-gradient(to right top, #750101, #931a17, #b12f2b, #d14240, #f15656); */
+  /* font-weight: lighter */
+}
+
+.list {
+  width: 130px;
+  height: 34px;
+  margin-top: 2.7rem;
+  font-family: 'Philosopher', sans-serif;
+}
+
+#drink1 {
+  height: 125px;
+  width: 125px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+#drink1:hover {
+  transform: scale(1.1);
+}
+
+a {
+  color: white;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+a.active {
+  color: red;
+}
+
+/* input {
+  line-height: 50px;
+  width: 40rem;
+}
+
+input[type='text'] {
+  padding: 60px 30px;
+  line-height: 28px;
+} */

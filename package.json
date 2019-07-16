@@ -6,9 +6,16 @@
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.0.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "global": "^4.4.0",
+    "stylus": "^0.54.5"
   },
   "scripts": {
+    "build-css": "stylus -c src/static/stylus/ --out src/static/css",
+    "watch-css": "yarn run build-css && stylus -c -w src/static/stylus --out src/static/css",
+    "start-js": "react-scripts start",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "start": "node server.js",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   }

@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { startCase } from '../utils';
 
-class MyDrink extends React.Component {
-  state = { drink: {} };
+class RandomDrinks extends React.Component {
+  state = { drink: {}, refetch: true };
 
   componentDidMount() {
     this.fetchDrinks();
@@ -11,9 +12,8 @@ class MyDrink extends React.Component {
   componentDidUpdate() {
     if (this.state.refetch) this.fetchDrinks();
   }
-
   fetchDrinks = () => {
-    axios.get(`/pages/Drink/${this.props.match.params.id}`).then(response => {
+    axios.get('/random-drink').then(response => {
       const data = response.data.drinks[0];
       const drink = Object.keys(data).reduce((acc, key) => {
         const value = data[key];
@@ -25,7 +25,6 @@ class MyDrink extends React.Component {
       this.setState({ drink: { ...drink, ...ingredients }, refetch });
     });
   };
-
   parseIngredient = (drink = {}) =>
     Object.keys(drink).reduce(
       (acc, key) => {
@@ -41,29 +40,35 @@ class MyDrink extends React.Component {
     );
 
   render() {
-    const { drink } = this.state;
+    const { drink, refetch } = this.state;
     console.log('rendering', this.state.drink);
     return (
-      <div>
-        <h2>Your Drink</h2>
-        <div className="container">
-          <h1>{drink.strDrink}</h1>
-          <div className="drink" />
-        </div>
+      <>
+        {refetch ? (
+          <div className="loader" />
+        ) : (
+          <>
+            <div className="container">
+              <h1>{drink.strDrink}</h1>
+              <div className="drink">
+                <div>
+                  <img src={drink.strDrinkThumb} />
+                </div>
 
-        <div id="drinkPhoto">
-          <img src={drink.strDrinkThumb} />
-        </div>
-
-        <div id="drinkInfo">
-          <h3>Ingredients</h3>
-          {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
-          <h3>Instructions</h3>
-          <p>{drink.strInstructions}</p>
-        </div>
-      </div>
+                <div id="drinkInfo">
+                  <h3>Ingredients</h3>
+                  {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
+                  <h3>Instructions</h3>
+                  <p>{drink.strInstructions}</p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        {/* </div> */}
+      </>
     );
   }
 }
 
-export default MyDrink;
+export default RandomDrinks;

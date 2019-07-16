@@ -1,0 +1,13 @@
+.submit button {
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 15px;
+  font-family: 'Lato', sans-serif;
+  background: #353535;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
