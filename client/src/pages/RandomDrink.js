@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { startCase } from '../utils';
+import Navbar from '../components/Navbar';
 
 class RandomDrinks extends React.Component {
     state = { drink: {}, refetch: true }
@@ -47,17 +48,22 @@ class RandomDrinks extends React.Component {
             ? <div className="loader"></div>
             : (
                 <>
-                    <div className="container">
-                    <h1>{drink.strDrink}</h1>
+
+                    <div className="random-container">
+
+                    <Navbar/>
+
+                    <h1 id="random-title">{drink.strDrink}</h1>
+
                         <div className="drink">
                         
-                            <div>
-                            <img src={drink.strDrinkThumb} />
+                            <div id="random-image">
+                            <img src={drink.strDrinkThumb} alt="random-drink"/>
                             </div>
                         
                             <div id="drinkInfo">
                             <h3>Ingredients</h3>
-                            {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
+                            {drink.ingredients && drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
                             <h3>Instructions</h3>
                             <p>{drink.strInstructions}</p>
                             </div>
