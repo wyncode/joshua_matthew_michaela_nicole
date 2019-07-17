@@ -20,29 +20,21 @@ class MyDrink extends React.Component {
       const data = response.data.drinks[0];
       const drink = Object.keys(data).reduce((acc, key) => {
         const value = data[key];
-        if (value && value !== '↵' && value.trim()) acc[key] = value;
-        return acc;
-      }, {});
-      const refetch = drink.strAlcoholic === 'Non alcoholic';
-      const ingredients = this.parseIngredient(drink);
-      this.setState({ drink: { ...drink, ...ingredients }, refetch });
-    });
-  };
-
-  parseIngredient = (drink = {}) =>
-    Object.keys(drink).reduce(
-      (acc, key) => {
+        if (!value || !value.trim() || value === '↵') return acc;
         if (key.includes('Ingredient')) {
           const index = key.slice(-1);
-          const ingredient = drink[key] || String();
-          const measurement = drink[`strMeasure${index}`] || '';
+          const ingredient = data[key] || '';
+          const measurement = data[`strMeasure${index}`] || '';
           acc.ingredients.push(`${measurement} ${ingredient}`.trim());
         }
+        acc[key] = value;
         return acc;
-      },
-      { ingredients: [] }
-    );
-
+      }, { ingredients: [] });
+      const refetch = drink.strAlcoholic === 'Non alcoholic';
+      this.setState({ drink, refetch });
+    });
+  };
+  
   render() {
     const { drink } = this.state;
     console.log('rendering', this.state.drink);
