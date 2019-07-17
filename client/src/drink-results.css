@@ -34,8 +34,8 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 #drink-results .individual-drink img {
-  width: 150px;
-  height: 250px;
+  width: 180px;
+  height: 280px;
   object-fit: cover;
   /* border-radius: 15px; */
 }
@@ -46,6 +46,12 @@
   position: relative;
   text-align: center;
   color: white;
+  box-shadow: 0 2px 12px rgba(0, 6, 12, 0.3);
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+.individual-drink:hover {
+  transform: translateY(-5px);
 }
 
 .error-container {
