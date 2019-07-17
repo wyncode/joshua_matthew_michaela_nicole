@@ -83,26 +83,6 @@
   border: 3px solid #AB0000;
 }
 
-.drink{
-  display: flex;
-  text-align: center;
-  margin: 2rem;
-  padding: 2rem;
-  text-align: center;
-  place-items: center auto;
-  filter: drop-shadow(20px 7px 4px black);
-  
-}
-
-
-.drink img {
-  width: 400px;
-  height: 500px;
-  object-fit: cover;
-  margin: 2rem;
-  border-radius: 5%;
-}
-
 .loader {
   border: 10px solid #f3f3f3;
   border-radius: 50%;
@@ -149,19 +129,6 @@
     color: white;
     margin: 5rem */
   /* */
-
-  h1 { 
-    margin-top: 5.0rem;
-    text-align: center;
-    border: white;
-    padding: 3px;
-    color: white
-  }
-  
-  #drinkInfo {
-    /* border:white solid 3px; */
-    color: white;
-  }
 
   #random-image {
   /* border: 1px solid #ddd;

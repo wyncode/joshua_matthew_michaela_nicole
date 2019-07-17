@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './search-inputs.css';
 import './drink-results.css';
-import './Drink.css';
+import './components/Drink.css';
 import './submit-button.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

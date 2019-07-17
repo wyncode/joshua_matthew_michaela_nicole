@@ -1,6 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { startCase } from '../utils';
+import Navbar from '../components/Navbar';
+import '../components/Drink.css';
+import '../images/bar-drinks.jpeg';
+
+
 
 class MyDrink extends React.Component {
   state = { drink: {} };
@@ -45,17 +50,19 @@ class MyDrink extends React.Component {
     console.log('rendering', this.state.drink);
     return (
       <div>
-        <h2>Your Drink</h2>
-        <div className="container">
-          <h1>{drink.strDrink}</h1>
-          <div className="drink" />
+        <Navbar id="random-nav" />
+        <h3>Your Drink</h3>
+        <div className="drink-container">
+          <div className="myDrink" >
+           <h1 >{drink.strDrink}</h1>
+          </div>
         </div>
 
-        <div id="drinkPhoto">
+        <div className="myDrinkpic">
           <img src={drink.strDrinkThumb} />
         </div>
 
-        <div id="drinkInfo">
+        <div className="drinkDetails">
           <h3>Ingredients</h3>
           {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
           <h3>Instructions</h3>
