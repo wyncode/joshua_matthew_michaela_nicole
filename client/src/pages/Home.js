@@ -10,7 +10,7 @@ const Welcome = () => {
       <div id="home-container">
         <Navbar id="random-nav" />
 
-        <div id="Lorem-ipsum-dolor-am">Spruce your date night. Make cocktails like a pro.</div>
+        <div id="Lorem-ipsum-dolor-am">Spruce up your date night. Make cocktails like a pro.</div>
 
         <div id="Lorem-ipsum-dolor-si">
           Show your special someone your drink making skills. Date night will never be the same. Go ahead. Tell us.
@@ -18,7 +18,7 @@ const Welcome = () => {
         </div>
 
         <div id="button-box">
-          <button id="home-button">Lorem ipsum</button>
+          <button id="home-button">Make a drink!</button>
         </div>
       </div>
     </div>
