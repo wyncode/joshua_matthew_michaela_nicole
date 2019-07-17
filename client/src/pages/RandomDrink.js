@@ -55,28 +55,34 @@ class RandomDrinks extends React.Component {
               <div className="body-random">
                 <div className="random-container">
                   {/* <Navbar /> */}
-
-                  <h1 className="random-title">{drink.strDrink}</h1>
-
+                  <div className="divider"><span></span><span>{drink.strDrink}</span><span></span></div>
+                  {/* <h1 className="random-title">{drink.strDrink}</h1> */}
+                  
                   <div className="drink">
+                    
                     <div id="random-image">
                       <img src={drink.strDrinkThumb} alt="random-drink" />
                     </div>
-
-                    <div className="drinkInfo">
-                      <h2>Ingredients</h2>
-                      {drink.ingredients &&
-                        drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
-                      <div className="instructions">
-                        <h2>Instructions</h2>
-                        <p>{drink.strInstructions}</p>
-                        <input
-                          type="button"
-                          className="random-button"
-                          value="I'm Feeling Tipsy!"
-                          onClick={this.fetchDrinks}
+                    
+                  <div className="drinkInfo">
+                  <input
+                            type="button"
+                            className="random-button"
+                            value="Serve Me Another!"
+                            onClick={this.fetchDrinks}
                         />
-                      </div>
+                    
+                  
+                        <div className="random-ingredients"><h2>Ingredients</h2>
+                          {drink.ingredients &&
+                          drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
+                        </div>
+                      
+                      
+                          <h2>Instructions</h2>
+                          <p>{drink.strInstructions}</p>
+                          
+                  
                     </div>
                   </div>
                 </div>
