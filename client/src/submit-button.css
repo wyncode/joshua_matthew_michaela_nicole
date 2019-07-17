@@ -10,4 +10,9 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.submit button:hover {
+  background-color: #ff5f2e;
 }

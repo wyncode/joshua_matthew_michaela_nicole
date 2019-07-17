@@ -8,7 +8,7 @@ class SearchDrinks extends React.Component {
     mixActive: false,
     garnish: '',
     garActive: false
-  }; // declaring an empty state object
+  }; // declaring objects
 
   // passes through the ingredient key which also passes through that event
   handleIngredients = ingredient => e => {
