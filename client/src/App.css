@@ -7,7 +7,6 @@
   background-size: cover;
   width: 100vw;
   height: 732px;
-  /* height: 100vh; */
   margin: 0;
   text-align: center;
 }
@@ -20,14 +19,14 @@ body {
   text-shadow: grey 1px 2px 2px;
   display: flex;
   display: flex;
-  margin-top: 4rem;
-  margin-left: 6.5rem;
+  margin-top: 10rem;
+  margin-left: 5rem;
   text-align: left;
-  max-width: 600px;
+  max-width: 450px;
   min-width: 350px;
   height: 156px;
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: light;
   font-style: normal;
   font-stretch: normal;
@@ -41,10 +40,10 @@ body {
 #Lorem-ipsum-dolor-si {
   display: flex;
   display: flex;
-  margin-top: 4rem;
-  margin-left: 6.5rem;
+  margin-top: 7rem;
+  margin-left: 5rem;
   text-align: left;
-  max-width: 500px;
+  max-width: 400px;
   min-width: 300px;
   height: 107px;
   font-family: 'Titillium Web', sans-serif;
@@ -62,12 +61,13 @@ body {
   min-width: 300px;
   display: flex;
   text-align: left;
-  margin-top: 2rem;
-  margin-left: 7rem;
+  margin-top: 1rem;
+  margin-left: 5rem;
 }
 
 #home-button {
   border-radius: 20px;
+  /* margin-left:1rem; */
   margin-top: 2rem;
   font-family: 'Raleway';
   background-color: black;
@@ -80,7 +80,24 @@ body {
 }
 
 #home-button:hover {
-  transform: scale(1.1);
-  color: black;
-  border: 3px solid #ab0000;
+  transform: scale(1.05);
+  cursor: pointer;
+  color: #ff0000;
+  border: 0.7px solid white;
 }
+
+@media only screen and (max-width: 600px) {
+
+  #Lorem-ipsum-dolor-am {
+    margin-right: 2rem;
+
+  #Lorem-ipsum-dolor-si{
+    background-color: red;
+    margin-right: 3rem;
+
+  }
+
+  }
+}
+
+
