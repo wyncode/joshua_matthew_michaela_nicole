@@ -6,12 +6,12 @@
   height: 100vh;
 }
 
-/* h3 {
+h3 {
   font-family: 'Philosopher', sans-serif;
   font-size: 1.1em;
   margin-left: 55px;
-  margin-top: 40px;
-} */
+  margin-top: 20px;
+}
 
 .container {
   font-family: 'Philosopher', sans-serif;
