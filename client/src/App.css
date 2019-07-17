@@ -1,17 +1,15 @@
-
 /* Home page styling */
 
-#home-container{
+#home-container {
   border: white solid 0.5px;
-  background-image: url("./images/cocktail.jpg");
-  background-repeat:no-repeat;
+  background-image: url('./images/cocktail.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 732px;
   /* height: 100vh; */
   margin: 0;
-  text-align: center
-
+  text-align: center;
 }
 
 #Lorem-ipsum-dolor-am {
@@ -33,7 +31,7 @@
   letter-spacing: 0.04px;
   color: #ffffff;
   opacity: 0.8;
-  overflow-anchor: 
+  /* overflow-anchor:  */
 }
 
 #Lorem-ipsum-dolor-si {
@@ -53,7 +51,7 @@
   line-height: 1.46;
   letter-spacing: 0.01px;
   color: white;
-  opacity: 0.7
+  opacity: 0.7;
 }
 
 #button-box {
@@ -68,22 +66,21 @@
   border-radius: 20px;
   margin-top: 2rem;
   font-family: 'Raleway';
-  background-color:black;
+  background-color: black;
   font-family: 'Titillium Web', sans-serif;
   color: white;
   font-size: 18px;
   width: 130px;
   font-style: codropsicons;
-  height:30px;
-
+  height: 30px;
 }
 
 #home-button:hover {
-  color: #AB0000;
+  color: #ab0000;
   cursor: pointer;
 }
 
-.drink{
+.drink {
   display: flex;
   text-align: center;
   margin: 2rem;
@@ -91,9 +88,7 @@
   text-align: center;
   place-items: center auto;
   filter: drop-shadow(20px 7px 4px black);
-  
 }
-
 
 .drink img {
   width: 400px;
@@ -106,21 +101,25 @@
 .loader {
   border: 10px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 10px solid #AB0000;
+  border-top: 10px solid #ab0000;
   width: 20px;
   height: 20px;
   animation: spin 2s linear infinite;
-  margin:auto;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  position:fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .list {
@@ -128,52 +127,49 @@
   height: 34px;
   margin-top: 2.7rem;
   font-family: 'Philosopher', sans-serif;
-  }
+}
 
-  .random-container{
-    margin-top:-1rem;
-    display: block;
-    font-family: 'Cinzel', serif;
-    background-image:  url("./images/bar-drinks.jpeg");
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vw;
-  }
+.random-container {
+  margin-top: -1rem;
+  display: block;
+  font-family: 'Cinzel', serif;
+  background-image: url('./images/bar-drinks.jpeg');
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vw;
+}
 
-  h1 { 
-    margin-top: 5.0rem;
-    text-align: center;
-    border: white;
-    padding: 3px;
-    color: white
-  }
-  
-  #drinkInfo {
-    color: white;
-  }
+h1 {
+  margin-top: 5rem;
+  text-align: center;
+  border: white;
+  padding: 3px;
+  color: white;
+}
 
-  #random-image {
- 
-  }
+#drinkInfo {
+  color: white;
+}
 
-  .tester {
-    padding: 1px;
-    height: 75px;
-  }
-  .rand-ins {
-    color: white;
-  }
+#random-image {
+}
 
+.tester {
+  padding: 1px;
+  height: 75px;
+}
+.rand-ins {
+  color: white;
+}
 
-  @media screen and (max-width: 650px) {
-    
-    #Lorem-ipsum-dolor-si {
-      margin-left: 3rem;
-      margin-right:2rem;
-    }
-      #Lorem-ipsum-dolor-am {
-        font-size: 40px;
-        margin-left: 3rem;
-        margin-right: 2rem;
-    }
+@media screen and (max-width: 650px) {
+  #Lorem-ipsum-dolor-si {
+    margin-left: 3rem;
+    margin-right: 2rem;
   }
+  #Lorem-ipsum-dolor-am {
+    font-size: 40px;
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
+}
