@@ -48,7 +48,7 @@ class Home extends React.Component {
 
   handleEmptyData = () => {
     if (this.state.drinks.length) {
-      this.setState({ errorMessage: '' });
+      // this.setState({ errorMessage: '' });
       return this.state.drinks.map(drink => (
         <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>
           <div className="individual-drink">

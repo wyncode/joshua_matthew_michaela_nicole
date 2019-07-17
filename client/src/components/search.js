@@ -46,7 +46,7 @@ class SearchDrinks extends React.Component {
                 autoComplete="off"
                 onChange={this.handleIngredients('alcohol')}
                 value={this.state.alcohol}
-                pattern="[a-zA-Z ]{1,15}"
+                pattern="{1,15}"
                 onFocus={e => this.setState({ alcActive: true })}
                 onBlur={e => this.setState({ alcActive: false })}
                 required
@@ -70,7 +70,7 @@ class SearchDrinks extends React.Component {
                 autoComplete="off"
                 onChange={this.handleIngredients('mixer')}
                 value={this.state.mixer}
-                pattern="[a-zA-Z ]{1,15}"
+                pattern="{1,15}"
                 onFocus={e => this.setState({ mixActive: true })}
                 onBlur={e => this.setState({ mixActive: false })}
                 required
@@ -92,7 +92,7 @@ class SearchDrinks extends React.Component {
                 autoComplete="off"
                 onChange={this.handleIngredients('garnish')}
                 value={this.state.garnish}
-                pattern="[a-zA-Z ]{1,15}"
+                pattern="{1,15}"
                 onFocus={e => this.setState({ garActive: true })}
                 onBlur={e => this.setState({ garActive: false })}
               />
