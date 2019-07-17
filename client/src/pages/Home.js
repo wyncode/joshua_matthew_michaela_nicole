@@ -26,15 +26,41 @@ const Welcome = () => {
 };
 
 class Home extends React.Component {
-  state = { drinks: [], errorMessage: "Sorry, we aren't familiar with those ingredients." };
+  state = { drinks: [], errorMessage: '' };
 
+  getErrorMessage = () => (
+    <div className="error-container">
+      <h1 className="error-message">Sorry, no drinks can be found with your ingredients</h1>
+      <img
+        src="https://www.trzcacak.rs/myfile/full/463-4632543_sad-face-transparent-clipart-png-download-sad-boys.png"
+        alt="sad face"
+      />
+    </div>
+  );
   findDrinks = searchWord => {
     // console.log("finding drinks", this);
     axios.get(`/drinks/${searchWord}`).then(({ data }) => {
-      this.setState({ drinks: Array.isArray(data.drinks) ? data.drinks : [] });
+      const dataDrinksIsArray = Array.isArray(data.drinks);
+      this.setState({ drinks: dataDrinksIsArray ? data.drinks : [] });
+      this.setState({ errorMessage: dataDrinksIsArray && data.drinks.length ? '' : this.getErrorMessage() });
     });
   };
 
+  handleEmptyData = () => {
+    if (this.state.drinks.length) {
+      this.setState({ errorMessage: '' });
+      return this.state.drinks.map(drink => (
+        <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>
+          <div className="individual-drink">
+            <h4>{drink.strDrink}</h4>
+            <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+          </div>
+        </Link>
+      ));
+    } else {
+      return this.state.errorMessage;
+    }
+  };
   render() {
     console.log(this.state.drinks);
     return (
@@ -45,20 +71,7 @@ class Home extends React.Component {
           <h2 id="divider">
             <span>Your Cocktails</span>
           </h2>
-          <div id="drink-results">
-            {!this.state.drinks[0] ? (
-              <h1 className="error-message"> {this.state.errorMessage}</h1>
-            ) : (
-              this.state.drinks.map(drink => (
-                <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>
-                  <div className="individual-drink">
-                    <h4>{drink.strDrink}</h4>
-                    <img src={drink.strDrinkThumb} alt={drink.strDrink} />
-                  </div>
-                </Link>
-              ))
-            )}
-          </div>
+          <div id="drink-results">{this.handleEmptyData()}</div>
         </div>
       </div>
     );

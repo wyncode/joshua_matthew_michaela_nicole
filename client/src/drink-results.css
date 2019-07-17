@@ -1,9 +1,3 @@
-#search h1,
-h1.error-message {
-  font-family: 'Julius Sans One', sans-serif;
-  color: #353535;
-}
-
 #search-container h2 {
   width: 100%;
   text-align: center;
@@ -17,13 +11,18 @@ h1.error-message {
   padding: 0 10px;
   font-family: 'Julius Sans One', sans-serif;
 }
+#search h1,
+.error-container h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #353535;
+}
 
 #drink-results {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-  margin: 25px 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+  margin: 5px;
   padding: 5px;
 }
 #drink-results .individual-drink h4 {
@@ -31,14 +30,14 @@ h1.error-message {
   width: 100%;
   font-size: 1.5rem;
   padding: 2px 0;
-  bottom: 0;
+  bottom: -32px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #drink-results .individual-drink img {
   width: 150px;
   height: 250px;
   object-fit: cover;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 .individual-drink {
   display: grid;
@@ -47,4 +46,9 @@ h1.error-message {
   position: relative;
   text-align: center;
   color: white;
+}
+
+.error-container {
+  display: grid;
+  place-items: center;
 }
