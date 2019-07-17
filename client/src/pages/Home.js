@@ -7,8 +7,10 @@ import Navbar from '../components/Navbar';
 const Welcome = () => {
   return (
     <div id="container">
+      
+       <Navbar id="random-nav" />
+
       <div id="home-container">
-        <Navbar id="random-nav" />
 
         <div id="Lorem-ipsum-dolor-am">Spruce up your date night. Make cocktails like a pro.</div>
 
@@ -18,7 +20,12 @@ const Welcome = () => {
         </div>
 
         <div id="button-box">
-          <button id="home-button">Make a drink!</button>
+           <a href="#search">
+            <button id="home-button">Make a drink!</button>
+           </a> 
+
+
+
         </div>
       </div>
     </div>

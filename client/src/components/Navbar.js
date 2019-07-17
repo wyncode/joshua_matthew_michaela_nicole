@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import drink1 from '../images/drink1.png';
+import wineglass1 from '../images/wineglass1.png';
 import instagram from '../images/instagram.png';
 import twitter from '../images/twitter.png';
 import facebook from '../images/facebook.png'
@@ -13,7 +13,7 @@ const Navbar = () => (
       <li>
         {' '}
         <NavLink className="nav-item" exact to="/">
-          <img src={drink1} id="drink1" alt="drink-icon" />{' '}
+          <img src={wineglass1} id="wineglass1" alt="winebottle-icon" />{' '}
         </NavLink>
       </li>
       <li>

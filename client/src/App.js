@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import MyDrink from './pages/Drink';
 import RandomDrink from './pages/RandomDrink';
+// import SearchDrinks from './components/SearchDrinks';
 
 const App = () => {
   return (
@@ -16,3 +17,4 @@ const App = () => {
 };
 
 export default App;
+  

@@ -11,6 +11,7 @@ app.get(`/drinks/:item`, (request, response) => {
   axios
     .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.API_KEY}/filter.php?i=${request.params.item}`)
     .then(cocktailResponse => {
+      console.log(request.params.item);
       console.log('cocktail response', cocktailResponse);
       response.json(cocktailResponse.data || []);
     });

@@ -15,23 +15,25 @@
 }
 
 #Lorem-ipsum-dolor-am {
+  text-shadow: grey 1px 2px 2px;
   display: flex;
   display: flex;
   margin-top: 4rem;
   margin-left: 6.5rem;
   text-align: left;
-  max-width: 550px;
-  min-width: 300px;
+  max-width: 600px;
+  min-width: 350px;
   height: 156px;
-  font-family: Raleway-serif;
-  font-size: 57px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 50px;
   font-weight: light;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
   letter-spacing: 0.04px;
   color: #ffffff;
-  opacity: 0.8
+  opacity: 0.8;
+  overflow-anchor: 
 }
 
 #Lorem-ipsum-dolor-si {
@@ -43,14 +45,14 @@
   max-width: 500px;
   min-width: 300px;
   height: 107px;
-  font-family: Philosopher;
-  font-size: 24px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
   font-weight: light;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.46;
   letter-spacing: 0.01px;
-  color: #ffffff;
+  color: white;
   opacity: 0.7
 }
 
@@ -63,17 +65,21 @@
 }
 
 #home-button {
-  border-radius: 05.5px;
+  border-radius: 20px;
+  margin-top: 2rem;
   font-family: 'Raleway';
+  background-color:black;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
   font-size: 18px;
-  width: 150px;
+  width: 130px;
   font-style: codropsicons;
-  transition: all 0.2s ease-in-out;
-  height:50px;
+  height:30px;
+
 }
 
 #home-button:hover {
-  color: black;
+  color: #AB0000;
   cursor: pointer;
 }
 
@@ -156,4 +162,18 @@
   }
   .rand-ins {
     color: white;
+  }
+
+
+  @media screen and (max-width: 650px) {
+    
+    #Lorem-ipsum-dolor-si {
+      margin-left: 3rem;
+      margin-right:2rem;
+    }
+      #Lorem-ipsum-dolor-am {
+        font-size: 40px;
+        margin-left: 3rem;
+        margin-right: 2rem;
+    }
   }
