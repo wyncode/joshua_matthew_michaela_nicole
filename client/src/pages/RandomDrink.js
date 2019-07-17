@@ -40,6 +40,7 @@ class RandomDrinks extends React.Component {
       { ingredients: [] }
     );
 
+
   render() {
     const { drink, refetch } = this.state;
     console.log('rendering', this.state.drink);
@@ -49,24 +50,37 @@ class RandomDrinks extends React.Component {
           <div className="loader" />
         ) : (
           <>
+          <Navbar />
+          <div className="background-image">
+           <div className="body-random">
             <div className="random-container">
-              <Navbar />
+              {/* <Navbar /> */}
 
-              <h1 id="random-title">{drink.strDrink}</h1>
+                <h1 className="random-title">
+                {drink.strDrink}
+                </h1>
 
-              <div className="drink">
-                <div id="random-image">
-                  <img src={drink.strDrinkThumb} alt="random-drink" />
-                </div>
+                <div className="drink">
+                  <div id="random-image">
+                    <img src={drink.strDrinkThumb} alt="random-drink" />
+                  </div>
 
-                <div id="drinkInfo">
-                  <h3>Ingredients</h3>
+                <div className="drinkInfo">
+                  <h2>Ingredients</h2>
                   {drink.ingredients &&
                     drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
-                  <h3>Instructions</h3>
+                  <div className="instructions">
+                  <h2>Instructions</h2>
                   <p>{drink.strInstructions}</p>
+                  <input type="button" class="button" value="Randomize" onClick={this.fetchDrinks}></input>
+                    </div>
+
+
+                  </div>
                 </div>
               </div>
+            </div>
+
             </div>
           </>
         )}

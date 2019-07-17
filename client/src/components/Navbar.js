@@ -16,6 +16,7 @@ const Navbar = () => (
           <img src={drink1} id="drink1" alt="drink-icon" />{' '}
         </NavLink>
       </li>
+    
       <li>
         <NavLink className="nav-item" exact to="/">
           Home
@@ -26,6 +27,7 @@ const Navbar = () => (
           Random Drink
         </NavLink>
       </li>
+      
       <li>
       <NavLink className="nav-item" exact to="/">
           <img src={facebook} id="facebook" alt="facebook-icon" />{' '}
@@ -41,6 +43,7 @@ const Navbar = () => (
           <img src={instagram} id="instagram" alt="instagram-icon" />{' '}
         </NavLink>
       </li>
+      
     </ul>
   </nav>
 );

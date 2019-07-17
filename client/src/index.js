@@ -5,6 +5,7 @@ import './search-inputs.css';
 import './drink-results.css';
 import './Drink.css';
 import './submit-button.css';
+import './RandomDrink.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
