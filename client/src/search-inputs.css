@@ -117,14 +117,14 @@
   position: absolute;
   top: -200%;
   left: 10px;
-  color: #ff5f2e;
+  color: #ec3723;
   font-weight: 800;
 }
 
 /* changes border color on focus */
 .input__field--chisato.active,
 .input--filled .input__field--chisato {
-  border-color: #ff5f2e;
+  border-color: #ec3723;
 }
 
 .input--filled {
@@ -132,7 +132,7 @@
   position: absolute;
   top: -50%;
   left: 10px;
-  color: #ff5f2e;
+  color: #ec3723;
   font-weight: 800;
 }
 
