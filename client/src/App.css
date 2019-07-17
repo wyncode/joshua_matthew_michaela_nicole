@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+body {
+  margin: 0%;
+}
+
 #Lorem-ipsum-dolor-am {
   text-shadow: grey 1px 2px 2px;
   display: flex;
@@ -76,84 +80,7 @@
 }
 
 #home-button:hover {
-  color: #ab0000;
-  cursor: pointer;
-}
-
-.loader {
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 10px solid #ab0000;
-  width: 20px;
-  height: 20px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: fixed;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.list {
-  width: 130px;
-  height: 34px;
-  margin-top: 2.7rem;
-  font-family: 'Philosopher', sans-serif;
-}
-
-.random-container {
-  margin-top: -1rem;
-  display: block;
-  font-family: 'Cinzel', serif;
-  background-image: url('./images/bar-drinks.jpeg');
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vw;
-}
-
-/* #random-title  */
-/* margin-top: rem; */
-/* text-align: center;
-    color: white;
-    margin: 5rem */
-/* */
-
-#random-image {
-  /* border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px; */
-  /* border: white solid 3px; */
-}
-
-#random-image {
-}
-
-.tester {
-  padding: 1px;
-  height: 75px;
-}
-.rand-ins {
-  color: white;
-}
-
-@media screen and (max-width: 650px) {
-  #Lorem-ipsum-dolor-si {
-    margin-left: 3rem;
-    margin-right: 2rem;
-  }
-  #Lorem-ipsum-dolor-am {
-    font-size: 40px;
-    margin-left: 3rem;
-    margin-right: 2rem;
-  }
+  transform: scale(1.1);
+  color: black;
+  border: 3px solid #ab0000;
 }

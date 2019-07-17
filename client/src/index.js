@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './search-inputs.css';
-import './drink-results.css';
-import './submit-button.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

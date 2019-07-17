@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { startCase } from '../utils';
 import Navbar from '../components/Navbar';
+import '../components/RandomDrink.css';
 
 class RandomDrinks extends React.Component {
   state = { drink: {}, refetch: true };
@@ -49,28 +50,40 @@ class RandomDrinks extends React.Component {
           <div className="loader" />
         ) : (
           <>
-            <div className="random-container">
-              <Navbar />
+            <Navbar />
+            <div className="background-image">
+              <div className="body-random">
+                <div className="random-container">
+                  {/* <Navbar /> */}
 
-              <h1 id="random-title">{drink.strDrink}</h1>
+                  <h1 className="random-title">{drink.strDrink}</h1>
 
-              <div className="drink">
-                <div id="random-image">
-                  <img src={drink.strDrinkThumb} alt="random-drink" />
-                </div>
+                  <div className="drink">
+                    <div id="random-image">
+                      <img src={drink.strDrinkThumb} alt="random-drink" />
+                    </div>
 
-                <div id="drinkInfo">
-                  <h3>Ingredients</h3>
-                  {drink.ingredients &&
-                    drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
-                  <h3>Instructions</h3>
-                  <p>{drink.strInstructions}</p>
+                    <div className="drinkInfo">
+                      <h2>Ingredients</h2>
+                      {drink.ingredients &&
+                        drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
+                      <div className="instructions">
+                        <h2>Instructions</h2>
+                        <p>{drink.strInstructions}</p>
+                        <input
+                          type="button"
+                          className="random-button"
+                          value="I'm Feeling Tipsy!"
+                          onClick={this.fetchDrinks}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </>
         )}
-        {/* </div> */}
       </>
     );
   }

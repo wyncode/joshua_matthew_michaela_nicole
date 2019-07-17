@@ -1,0 +1,93 @@
+.body-random {
+  overflow: hidden;
+  color: white;
+}
+/* _______Page Loader______ */
+
+.loader {
+  /* border: 10px solid #f3f3f3; */
+  border-radius: 50%;
+  border-top: 10px solid #ab0000;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.random-container {
+  margin: auto;
+  margin-top: -1rem;
+  border: red solid 5spx;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  background-image: url('../images/bar-drinks2.jpg');
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
+}
+.random-title {
+  margin-top: 5rem;
+  text-align: center;
+  padding: 3px;
+}
+.drink {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  place-items: center auto;
+  width: 1000px;
+  margin: 50px auto;
+  padding: 5rem;
+  background: rgba(71, 68, 68, 0.8);
+}
+.drink img {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  margin: 0rem;
+}
+.drinkInfo {
+  text-align: left;
+  margin-left: 5rem;
+}
+.tester {
+  padding: 1px;
+  height: 75px;
+}
+.rand-ins {
+  color: whitesmoke;
+}
+.random-button {
+  background-color: whitesmoke;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Philosopher', sans-serif;
+  margin: 4px 2px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.random-button:hover {
+  transform: scale(1.3);
+}

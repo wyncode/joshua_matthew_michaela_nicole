@@ -3,6 +3,9 @@ import Search from '../components/Search';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import '../search-inputs.css';
+import '../drink-results.css';
+import '../submit-button.css';
 
 const Welcome = () => {
   return (
