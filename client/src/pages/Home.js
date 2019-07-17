@@ -46,7 +46,7 @@ class Home extends React.Component {
             <span>Your Cocktails</span>
           </h2>
           <div id="drink-results">
-            {this.state.errorMessage ? (
+            {!this.state.drinks[0] ? (
               <h1 className="error-message"> {this.state.errorMessage}</h1>
             ) : (
               this.state.drinks.map(drink => (
