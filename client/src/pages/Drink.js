@@ -48,25 +48,26 @@ class MyDrink extends React.Component {
     console.log('rendering', this.state.drink);
     return (
       <div className="myDrink">
-        <Navbar id="random-nav" />
+        <Navbar />
         <h3>Your Drink</h3>
-        <div className="drink-container">
-          <div className="myDrink">
-            <h1>{drink.strDrink}</h1>
-          </div>
-        </div>
+      
+        <h1 className="myDrink2">{drink.strDrink}</h1>
 
         <div className="myDrinkpic">
-          <img src={drink.strDrinkThumb} />
+          <div id="myDrink img">
+            <img src={drink.strDrinkThumb} />
         </div>
 
         <div className="drinkDetails">
           <h3>Ingredients</h3>
           {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
-          <h3>Instructions</h3>
-          <p>{drink.strInstructions}</p>
+          <div className="drinkInstructions">
+            <h3>Instructions</h3>
+              <p>{drink.strInstructions}</p>
+          </div>
         </div>
       </div>
+    </div>
     );
   }
 }

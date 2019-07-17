@@ -1,18 +1,17 @@
-div.myDrink {
-  margin: auto;
+.myDrink {
   background-image: url('../images/bar-drinks2.jpg');
-  height: 100%;
+  background-size: cover;
+  background-image: repeat;
+  display: grid;
+  height: 100vh;
 }
 
-h3 {
+/* h3 {
   font-family: 'Philosopher', sans-serif;
   font-size: 1.1em;
   margin-left: 55px;
   margin-top: 40px;
-}
-
-.drink-container {
-}
+} */
 
 .container {
   font-family: 'Philosopher', sans-serif;
@@ -21,28 +20,25 @@ h3 {
   text-align: center;
 }
 
-.myDrink h1 {
+.myDrink2 {
   color: white;
   font-family: 'Cinzel', serif;
-}
-
-h1 {
-  color: white;
+  font-size: 3rem;
   text-align: center;
-  /* text-align: center; */
+  margin-top: 15px;
 }
 
-/* h1{ 
+/* h1 { 
   margin-top: 5.0rem;
   text-align: center;
   border: none;
   padding: 3px;
-  color: #404d5b;
+  color: white;
   margin-left: 30px;
   margin-right: 30px;
 } */
 
-.drink {
+/* .drink {
   display: flex;
   text-align: center;
   margin-top: 0px;
@@ -51,18 +47,15 @@ h1 {
   text-align: center;
   place-items: center auto;
   border-radius: 40;
-}
+} */
 
 .container-drink {
   place-items: center;
-  height: 50px;
+  height: 100%;
   width: 100px;
   font-family: 'Philosopher', sans-serif;
 }
 
-/* .back {
-  background-size: cover;
-} */
 
 /* .drink{
   height: auto;
@@ -70,9 +63,20 @@ h1 {
   font-family: 'Philosopher', sans-serif;
 } */
 
-.drinkPhoto {
+/* .drinkPhoto {
   margin-top: 0;
   margin-bottom: 50px;
+} */
+
+.myDrinkpic {
+ display: grid;
+ text-align: center;
+ grid-template-columns: 0.75fr 0.75fr;
+ place-items: center auto;
+ width: 1000px;
+ margin: 50px auto;
+ padding: 5rem;
+ background: rgba(71, 68, 68, 0.8);
 }
 
 .myDrinkpic img {
@@ -86,14 +90,15 @@ h1 {
 
 .drinkDetails {
   color: white;
-  float: right;
+  text-align: left;
+  margin-left: 5rem;
+  /* float: right;
   position: relative;
   /* place-content: right; */
   margin-top: -15px;
   margin-left: 100px;
   margin-bottom: 100px;
-  place-items: ;
-}
+} */
 
 .drinkDetails h3 {
   margin-top: -30px;
