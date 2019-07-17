@@ -1,5 +1,4 @@
 
-
 .body-random {
   overflow: hidden;
   color: white;
@@ -66,7 +65,7 @@
 
 .divider {								/* minor cosmetics */
   display: table; 
-  font-size: 24px; 
+  font-size: 25px; 
   text-align: center; 
   width: 75%; 						/* divider width */
   margin: 40px auto;					/* spacing above/below */
