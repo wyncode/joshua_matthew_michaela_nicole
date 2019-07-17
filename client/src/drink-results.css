@@ -1,13 +1,9 @@
-#search h1 {
-  font-family: 'Julius Sans One', sans-serif;
-}
-
 #search-container h2 {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #000;
   line-height: 0.1em;
-  margin: 50px 0 20px;
+  margin: 25px 0 20px;
 }
 
 #search-container h2 span {
@@ -15,13 +11,18 @@
   padding: 0 10px;
   font-family: 'Julius Sans One', sans-serif;
 }
+#search h1,
+.error-container h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  color: #353535;
+}
 
 #drink-results {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-  margin: 25px 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+  margin: 5px;
   padding: 5px;
 }
 #drink-results .individual-drink h4 {
@@ -29,14 +30,14 @@
   width: 100%;
   font-size: 1.5rem;
   padding: 2px 0;
-  bottom: 0;
+  bottom: -32px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #drink-results .individual-drink img {
-  width: 150px;
-  height: 250px;
+  width: 180px;
+  height: 280px;
   object-fit: cover;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 .individual-drink {
   display: grid;
@@ -45,4 +46,20 @@
   position: relative;
   text-align: center;
   color: white;
+  box-shadow: 0 2px 12px rgba(0, 6, 12, 0.3);
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+.individual-drink:hover {
+  transform: translateY(-5px);
+}
+
+.error-container {
+  display: grid;
+  place-items: center;
+}
+
+.error-container img {
+  margin-top: 25px;
+  width: 50%;
 }

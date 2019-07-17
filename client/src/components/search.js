@@ -3,9 +3,12 @@ import React from 'react';
 class SearchDrinks extends React.Component {
   state = {
     alcohol: '',
+    alcActive: false,
     mixer: '',
-    garnish: ''
-  }; // declaring an empty state object
+    mixActive: false,
+    garnish: '',
+    garActive: false
+  }; // declaring objects
 
   // passes through the ingredient key which also passes through that event
   handleIngredients = ingredient => e => {
@@ -24,7 +27,6 @@ class SearchDrinks extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div id="search">
         <h1>search</h1>
@@ -32,7 +34,9 @@ class SearchDrinks extends React.Component {
           <section id="input-wrapper">
             <span className="input input--chisato">
               <input
-                className="input__field input__field--chisato"
+                className={`input__field input__field--chisato ${
+                  this.state.alcActive || this.state.alcohol.length ? 'active' : ''
+                }`}
                 type="text"
                 id="input-13"
                 name="alcohol"
@@ -40,7 +44,9 @@ class SearchDrinks extends React.Component {
                 autoComplete="off"
                 onChange={this.handleIngredients('alcohol')}
                 value={this.state.alcohol}
-                pattern="[a-zA-Z ]{1,15}"
+                // pattern="{1,15}"
+                onFocus={e => this.setState({ alcActive: true })}
+                onBlur={e => this.setState({ alcActive: false })}
                 required
               />
 
@@ -52,7 +58,9 @@ class SearchDrinks extends React.Component {
             </span>
             <span className="input input--chisato">
               <input
-                className="input__field input__field--chisato"
+                className={`input__field input__field--chisato ${
+                  this.state.mixActive || this.state.mixer.length ? 'active' : ''
+                }`}
                 type="text"
                 id="input-13"
                 name="mixer"
@@ -60,7 +68,9 @@ class SearchDrinks extends React.Component {
                 autoComplete="off"
                 onChange={this.handleIngredients('mixer')}
                 value={this.state.mixer}
-                pattern="[a-zA-Z ]{1,15}"
+                // pattern="{1,15}"
+                onFocus={e => this.setState({ mixActive: true })}
+                onBlur={e => this.setState({ mixActive: false })}
                 required
               />
               <label className="input__label input__label--chisato">
@@ -71,27 +81,27 @@ class SearchDrinks extends React.Component {
             </span>
             <span className="input input--chisato">
               <input
-                className="input__field input__field--chisato"
+                className={`input__field input__field--chisato ${
+                  this.state.garActive || this.state.garnish.length ? 'active' : ''
+                }`}
                 type="text"
                 id="input-13"
                 name="garnish"
                 autoComplete="off"
                 onChange={this.handleIngredients('garnish')}
                 value={this.state.garnish}
-                pattern="[a-zA-Z ]{1,15}"
+                // pattern="{1,15}"
+                onFocus={e => this.setState({ garActive: true })}
+                onBlur={e => this.setState({ garActive: false })}
               />
-              <label
-                className={`input__label input__label--chisato ${
-                  this.state.garnish.length > 0 ? 'input--filled input__label-content--chisato--after' : ''
-                }`}
-              >
+              <label className="input__label input__label--chisato">
                 <span className="input__label-content input__label-content--chisato" data-content="Garnish">
                   Garnish
                 </span>
               </label>
             </span>
           </section>
-          <div class="submit">
+          <div className="submit">
             <button type="submit">Drink!</button>
           </div>
         </form>

@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import MyDrink from './pages/Drink';
 import RandomDrink from './pages/RandomDrink';
+// import SearchDrinks from './components/SearchDrinks';
 
 const App = () => {
   return (
@@ -11,9 +12,9 @@ const App = () => {
       <Route exact path="/random-drink" component={RandomDrink} />
       <Route exact path="/" component={Home} />
       <Route path="/MyDrink/:id" component={MyDrink} />
-      {/* <Route exact path="/" component={Drink} /> */}
     </BrowserRouter>
   );
 };
 
 export default App;
+  

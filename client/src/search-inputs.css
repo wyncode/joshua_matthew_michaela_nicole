@@ -42,7 +42,7 @@
 
 .input__label {
   display: inline-block;
-  float: right;
+  /* float: right; */
   padding: 0 1em;
   width: 40%;
   color: #696969;
@@ -88,7 +88,7 @@
   padding: 0.8em 0.5em;
   background: transparent;
   border: 2px solid;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #b5b5b5;
   -webkit-transition: border-color 0.25s;
   transition: border-color 0.25s;
@@ -111,20 +111,20 @@
   font-weight: 400;
   color: #b5b5b5;
 }
-
+/* animates the label above input */
 .input__label-content--chisato::after {
   content: attr(data-content);
   position: absolute;
   top: -200%;
   left: 10px;
-  color: #da6484;
+  color: #ec3723;
   font-weight: 800;
 }
 
 /* changes border color on focus */
-.input__field--chisato:focus,
+.input__field--chisato.active,
 .input--filled .input__field--chisato {
-  border-color: #da6484;
+  border-color: #ec3723;
 }
 
 .input--filled {
@@ -132,19 +132,19 @@
   position: absolute;
   top: -50%;
   left: 10px;
-  color: #da6484;
+  color: #ec3723;
   font-weight: 800;
 }
 
 /* adds label to top of input on focus */
-.input__field--chisato:focus + .input__label--chisato,
+.input__field--chisato.active + .input__label--chisato,
 .input--filled .input__label--chisato {
   -webkit-animation: anim-chisato-1 0.25s forwards;
   animation: anim-chisato-1 0.25s forwards;
 }
 
 /* changes font color on focus */
-.input__field--chisato:focus + .input__label--chisato .input__label-content--chisato,
+.input__field--chisato.active + .input__label--chisato .input__label-content--chisato,
 .input--filled .input__label-content--chisato {
   -webkit-animation: anim-chisato-2 0.25s forwards ease-in;
   animation: anim-chisato-2 0.25s forwards ease-in;
