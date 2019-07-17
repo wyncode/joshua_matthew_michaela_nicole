@@ -20,7 +20,7 @@ const Navbar = () => (
         <NavLink className="nav-item">Home</NavLink>
       </li> */}
       <li>
-        <NavLink className="nav-item" exact to="/Random-drink">
+        <NavLink className="nav-item" id="tipsee" exact to="/Random-drink">
           Tipsee
         </NavLink>
       </li>
