@@ -3,11 +3,11 @@ import React from 'react';
 class SearchDrinks extends React.Component {
   state = {
     alcohol: '',
-    alcActive: 'false',
+    alcActive: false,
     mixer: '',
-    mixActive: 'false',
+    mixActive: false,
     garnish: '',
-    garActive: 'false'
+    garActive: false
   }; // declaring an empty state object
 
   // passes through the ingredient key which also passes through that event
@@ -20,7 +20,6 @@ class SearchDrinks extends React.Component {
     event.preventDefault();
     // saving the ingredients into one variable
     const ingredients = [this.state.mixer, this.state.alcohol, this.state.garnish].join(',');
-    console.log(ingredients);
     // feeding ingredients into the findDrinks function
     this.props.findDrinks(ingredients);
     // resetting the ingredients after submit
@@ -28,7 +27,6 @@ class SearchDrinks extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div id="search">
         <h1>search</h1>
@@ -37,7 +35,7 @@ class SearchDrinks extends React.Component {
             <span className="input input--chisato">
               <input
                 className={`input__field input__field--chisato ${
-                  this.state.alcActive.active || this.state.alcohol.length ? 'active' : ''
+                  this.state.alcActive || this.state.alcohol.length ? 'active' : ''
                 }`}
                 type="text"
                 id="input-13"
@@ -61,7 +59,7 @@ class SearchDrinks extends React.Component {
             <span className="input input--chisato">
               <input
                 className={`input__field input__field--chisato ${
-                  this.state.mixActive.active || this.state.mixer.length ? 'active' : ''
+                  this.state.mixActive || this.state.mixer.length ? 'active' : ''
                 }`}
                 type="text"
                 id="input-13"
@@ -84,7 +82,7 @@ class SearchDrinks extends React.Component {
             <span className="input input--chisato">
               <input
                 className={`input__field input__field--chisato ${
-                  this.state.garActive.active || this.state.garnish.length ? 'active' : ''
+                  this.state.garActive || this.state.garnish.length ? 'active' : ''
                 }`}
                 type="text"
                 id="input-13"
