@@ -16,14 +16,14 @@ const Welcome = () => {
       <Navbar id="main-nav" />
         <div id="Lorem-ipsum-dolor-am">
           
-         <p className="home-main-text"> Spruce up your date night.
+         <p className="home-main-text animated fadeInLeft"> Spruce up your date night.
              Make cocktails like a pro.
           </p> 
             
         </div>
 
         <div id="Lorem-ipsum-dolor-si">
-          <p className="homesub-text"> 
+          <p className="homesub-text animated fadeInLeft"> 
              Show your special someone your drink making skills.
              Date night will never be the same. Go ahead. Tell us.
              What's in your fridge?

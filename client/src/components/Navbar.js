@@ -12,7 +12,7 @@ const Navbar = () => (
       <li>
         {' '}
         <NavLink className="nav-item" exact to="/">
-          <img src={wineglass1} id="wineglass1" alt="winebottle-icon" />{' '}
+          <img className="nav-icon animated bounceInDown" src={wineglass1} id="wineglass1" alt="winebottle-icon" />{' '}
         </NavLink>
       </li>
 
@@ -20,7 +20,7 @@ const Navbar = () => (
         <NavLink className="nav-item">Home</NavLink>
       </li> */}
       <li>
-        <NavLink className="nav-item" id="tipsee" exact to="/Random-drink">
+        <NavLink className="nav-item" exact to="/Random-drink">
           Tipsee
         </NavLink>
       </li>
@@ -30,17 +30,17 @@ const Navbar = () => (
       <li>
         
         <a className="nav-item" href="https://www.facebook.com/wyncode/">
-          <img src={facebook} id="facebook" alt="facebook-icon" />
+          <img className="nav-icon animated bounceInDown" src={facebook} id="facebook" alt="facebook-icon" />
         </a>{' '}
       </li>
       <li>
         <a className="nav-item" href="https://twitter.com/wyncode">
-          <img src={twitter} id="twitter" alt="twitter-icon" />{' '}
+          <img className="nav-icon animated bounceInDown" src={twitter} id="twitter" alt="twitter-icon" />{' '}
         </a>{' '}
       </li>
       <li>
         <a className="nav-item" href="https://www.pinterest.com/">
-          <img src={pinterest} id="pinterest" alt="pinterest-icon" />{' '}
+          <img className="nav-icon animated bounceInDown" src={pinterest} id="pinterest" alt="pinterest-icon" />{' '}
         </a>{' '}
       </li>
       </span>
