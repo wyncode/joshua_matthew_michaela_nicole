@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import drink1 from '../images/drink1.png';
+import wineglass1 from '../images/wineglass1.png';
 import instagram from '../images/instagram.png';
 import twitter from '../images/twitter.png';
 import facebook from '../images/facebook.png'
@@ -13,11 +13,11 @@ const Navbar = () => (
       <li>
         {' '}
         <NavLink className="nav-item" exact to="/">
-          <img src={drink1} id="drink1" alt="drink-icon" />{' '}
+          <img src={wineglass1} id="wineglass1" alt="winebottle-icon" />{' '}
         </NavLink>
       </li>
       <li>
-        <NavLink className="nav-item" exact to="/">
+        <NavLink className="nav-item">
           Home
         </NavLink>
       </li>
@@ -26,21 +26,24 @@ const Navbar = () => (
           Random Drink
         </NavLink>
       </li>
+
+      <span id="nav-social">
+
       <li>
-      <NavLink className="nav-item" exact to="/">
-          <img src={facebook} id="facebook" alt="facebook-icon" />{' '}
-        </NavLink>
+
+      <a className="nav-item" href="https://www.facebook.com/wyncode/">
+        <img src={facebook} id="facebook" alt="facebook-icon" />
+        </a>{' '}
       </li>
       <li>
-      <NavLink className="nav-item" exact to="/">
-          <img src={twitter} id="twitter" alt="twitter-icon" />{' '}
-        </NavLink>
+      <a className="nav-item" href="https://twitter.com/wyncode">
+          <img src={twitter} id="twitter" alt="twitter-icon" /> </a>{' '}
       </li>
       <li>
-      <NavLink className="nav-item" exact to="/">
-          <img src={instagram} id="instagram" alt="instagram-icon" />{' '}
-        </NavLink>
+      <a className="nav-item" href="https://www.instagram.com/wyncode/?hl=en">
+          <img src={instagram} id="instagram" alt="instagram-icon" /> </a>{' '}
       </li>
+      </span>
     </ul>
   </nav>
 );

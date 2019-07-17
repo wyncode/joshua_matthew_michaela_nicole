@@ -3,7 +3,6 @@
 
 #home-container{
   border: white solid 0.5px;
-  /* border: yellow solid 3px; */
   background-image: url("./images/cocktail.jpg");
   background-repeat:no-repeat;
   background-size: cover;
@@ -16,29 +15,29 @@
 }
 
 #Lorem-ipsum-dolor-am {
+  text-shadow: grey 1px 2px 2px;
   display: flex;
-  /* border: yellow solid 3px; */
   display: flex;
   margin-top: 4rem;
   margin-left: 6.5rem;
   text-align: left;
-  max-width: 550px;
-  min-width: 300px;
+  max-width: 600px;
+  min-width: 350px;
   height: 156px;
-  font-family: sans-serif;
-  font-size: 57px;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 50px;
   font-weight: light;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
   letter-spacing: 0.04px;
   color: #ffffff;
-  opacity: 0.8
+  opacity: 0.8;
+  overflow-anchor: 
 }
 
 #Lorem-ipsum-dolor-si {
   display: flex;
-  /* border: yellow solid 3px; */
   display: flex;
   margin-top: 4rem;
   margin-left: 6.5rem;
@@ -46,19 +45,18 @@
   max-width: 500px;
   min-width: 300px;
   height: 107px;
-  font-family: Philosopher;
-  font-size: 24px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
   font-weight: light;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.46;
   letter-spacing: 0.01px;
-  color: #ffffff;
+  color: white;
   opacity: 0.7
 }
 
 #button-box {
-  /* border: yellow solid 3px; */
   min-width: 300px;
   display: flex;
   text-align: left;
@@ -67,20 +65,22 @@
 }
 
 #home-button {
-  border-radius: 05.5px;
-  font-family: Philosopher;
+  border-radius: 20px;
+  margin-top: 2rem;
+  font-family: 'Raleway';
+  background-color:black;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
   font-size: 18px;
-  background-color: white;
-  width: 150px;
-  font-style: philosopher;
-  transition: all 0.2s ease-in-out;
-  height:50px;
+  width: 130px;
+  font-style: codropsicons;
+  height:30px;
+
 }
 
 #home-button:hover {
-  transform: scale(1.1);
-  color: black;
-  border: 3px solid #AB0000;
+  color: #AB0000;
+  cursor: pointer;
 }
 
 .drink{
@@ -130,11 +130,8 @@
   font-family: 'Philosopher', sans-serif;
   }
 
-  /* random drink page */
-
   .random-container{
     margin-top:-1rem;
-    /* border: red solid 5spx; */
     display: block;
     font-family: 'Cinzel', serif;
     background-image:  url("./images/bar-drinks.jpeg");
@@ -142,13 +139,6 @@
     width: 100vw;
     height: 100vw;
   }
-
-  /* #random-title  */
-    /* margin-top: rem; */
-    /* text-align: center;
-    color: white;
-    margin: 5rem */
-  /* */
 
   h1 { 
     margin-top: 5.0rem;
@@ -159,15 +149,11 @@
   }
   
   #drinkInfo {
-    /* border:white solid 3px; */
     color: white;
   }
 
   #random-image {
-  /* border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px; */
-    /* border: white solid 3px; */
+ 
   }
 
   .tester {
@@ -176,4 +162,18 @@
   }
   .rand-ins {
     color: white;
+  }
+
+
+  @media screen and (max-width: 650px) {
+    
+    #Lorem-ipsum-dolor-si {
+      margin-left: 3rem;
+      margin-right:2rem;
+    }
+      #Lorem-ipsum-dolor-am {
+        font-size: 40px;
+        margin-left: 3rem;
+        margin-right: 2rem;
+    }
   }
