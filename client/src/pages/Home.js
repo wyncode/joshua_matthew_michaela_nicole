@@ -47,7 +47,7 @@ class Home extends React.Component {
           </h2>
           <div id="drink-results">
             {this.state.errorMessage ? (
-              <h1> {this.state.errorMessage}</h1>
+              <h1 className="error-message"> {this.state.errorMessage}</h1>
             ) : (
               this.state.drinks.map(drink => (
                 <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>

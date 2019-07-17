@@ -1,4 +1,5 @@
-#search h1 {
+#search h1,
+h1.error-message {
   font-family: 'Julius Sans One', sans-serif;
   color: #353535;
 }
