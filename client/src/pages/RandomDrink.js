@@ -72,7 +72,7 @@ class RandomDrinks extends React.Component {
                   <div className="instructions">
                   <h2>Instructions</h2>
                   <p>{drink.strInstructions}</p>
-                  <input type="button" class="button" value="Randomize" onClick={this.fetchDrinks}></input>
+                  <input type="button" className="random-button" value="I'm Feeling Tipsy!" onClick={this.fetchDrinks}></input>
                     </div>
 
 
@@ -84,7 +84,7 @@ class RandomDrinks extends React.Component {
             </div>
           </>
         )}
-        {/* </div> */}
+        
       </>
     );
   }

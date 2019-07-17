@@ -1,40 +1,26 @@
 .body-random{
   overflow: hidden;
   color:white;
-  
 }
-
-
 .drink{
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 1fr;
-  /* margin: 2rem;
-  padding: 2rem; */
   text-align: center;
   place-items: center auto;
-  /* filter: drop-shadow(20px 7px 4px black); */
-  /* background-color:red; */
   width: 1000px;
-  /* height: auto; */
   margin: 50px auto;
-  /* overflow: auto; */
   padding: 5rem;
   background: rgba(71, 68, 68, 0.8);
-  /* background: rgba(85, 77, 77, .9) */
-  
-  
 }
-
-
 .drink img {
   width: 400px;
   height: 500px;
   object-fit: cover;
   margin: 0rem;
-  
-  /* border-radius: 5%; */
 }
+
+/* _______Page Loader______ */
 
 .loader {
   /* border: 10px solid #f3f3f3; */
@@ -50,22 +36,10 @@
   bottom:0;
   position:fixed;
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-.list {
-  width: 130px;
-  height: 34px;
-  margin-top: 2.7rem;
-  margin-left: 10rem;
-  font-family: 'Philosopher', sans-serif;
-  }
-
-  /* random drink page */
-
   .random-container{
     margin: auto;
     margin-top:-1rem;
@@ -77,49 +51,18 @@
     background-image: url("./images/bar-drinks2.jpg");
     background-size: cover;
     position: absolute;
-    /* height: 100vw; */
-    /* width: 100vw;
-    overflow: hidden; 
-  }
-
-  /* .background-image{
-    background-image: url("./images/bar-drinks.jpeg");
-    opacity: .6;
-    background-size: cover;
-    position: absolute;
-    /* height: 100vw; */
     width: 100vw;
     overflow: hidden;
-
-  } */
-
-
-
-
-   h1 { 
+  } 
+   .random-title{ 
     margin-top: 5.0rem;
     text-align: center;
-    /* border: white; */
     padding: 3px;
-    /* color: white */
-    
   } 
-  
   .drinkInfo {
     text-align: left;
     margin-left: 5rem;
-    
-    
-
   }
-
-  /* .instructions , .{
-    text-align: left;
-    margin-left: 10rem;
-    /* overflow: auto; */
-    
-  
-
   .tester {
     padding: 1px;
     height: 75px;
@@ -127,9 +70,7 @@
   .rand-ins {
     color:whitesmoke;
   }
-
-
-  .button {
+  .random-button {
     background-color: whitesmoke;
     border: none;
     color: black;
@@ -142,5 +83,4 @@
     margin: 4px 2px;
     padding: 10px;
     cursor: pointer;
-    
   }
