@@ -26,7 +26,7 @@ const Welcome = () => {
 };
 
 class Home extends React.Component {
-  state = { drinks: [] };
+  state = { drinks: [], errorMessage: "Sorry, we aren't familiar with those ingredients." };
 
   findDrinks = searchWord => {
     // console.log("finding drinks", this);
@@ -46,14 +46,18 @@ class Home extends React.Component {
             <span>Your Cocktails</span>
           </h2>
           <div id="drink-results">
-            {this.state.drinks.map(drink => (
-              <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>
-                <div className="individual-drink">
-                  <h4>{drink.strDrink}</h4>
-                  <img src={drink.strDrinkThumb} alt={drink.strDrink} />
-                </div>
-              </Link>
-            ))}
+            {this.state.errorMessage ? (
+              <h1> {this.state.errorMessage}</h1>
+            ) : (
+              this.state.drinks.map(drink => (
+                <Link key={drink.idDrink} to={`/MyDrink/${drink.idDrink}`}>
+                  <div className="individual-drink">
+                    <h4>{drink.strDrink}</h4>
+                    <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+                  </div>
+                </Link>
+              ))
+            )}
           </div>
         </div>
       </div>

@@ -20,6 +20,7 @@ class SearchDrinks extends React.Component {
     event.preventDefault();
     // saving the ingredients into one variable
     const ingredients = [this.state.mixer, this.state.alcohol, this.state.garnish].join(',');
+    console.log(ingredients);
     // feeding ingredients into the findDrinks function
     this.props.findDrinks(ingredients);
     // resetting the ingredients after submit
