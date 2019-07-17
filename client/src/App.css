@@ -3,7 +3,6 @@
 
 #home-container{
   border: white solid 0.5px;
-  /* border: yellow solid 3px; */
   background-image: url("./images/cocktail.jpg");
   background-repeat:no-repeat;
   background-size: cover;
@@ -17,7 +16,6 @@
 
 #Lorem-ipsum-dolor-am {
   display: flex;
-  /* border: yellow solid 3px; */
   display: flex;
   margin-top: 4rem;
   margin-left: 6.5rem;
@@ -25,7 +23,7 @@
   max-width: 550px;
   min-width: 300px;
   height: 156px;
-  font-family: sans-serif;
+  font-family: Raleway-serif;
   font-size: 57px;
   font-weight: light;
   font-style: normal;
@@ -38,7 +36,6 @@
 
 #Lorem-ipsum-dolor-si {
   display: flex;
-  /* border: yellow solid 3px; */
   display: flex;
   margin-top: 4rem;
   margin-left: 6.5rem;
@@ -58,7 +55,6 @@
 }
 
 #button-box {
-  /* border: yellow solid 3px; */
   min-width: 300px;
   display: flex;
   text-align: left;
@@ -68,19 +64,17 @@
 
 #home-button {
   border-radius: 05.5px;
-  font-family: Philosopher;
+  font-family: 'Raleway';
   font-size: 18px;
-  background-color: white;
   width: 150px;
-  font-style: philosopher;
+  font-style: codropsicons;
   transition: all 0.2s ease-in-out;
   height:50px;
 }
 
 #home-button:hover {
-  transform: scale(1.1);
   color: black;
-  border: 3px solid #AB0000;
+  cursor: pointer;
 }
 
 .drink{
@@ -130,11 +124,8 @@
   font-family: 'Philosopher', sans-serif;
   }
 
-  /* random drink page */
-
   .random-container{
     margin-top:-1rem;
-    /* border: red solid 5spx; */
     display: block;
     font-family: 'Cinzel', serif;
     background-image:  url("./images/bar-drinks.jpeg");
@@ -142,13 +133,6 @@
     width: 100vw;
     height: 100vw;
   }
-
-  /* #random-title  */
-    /* margin-top: rem; */
-    /* text-align: center;
-    color: white;
-    margin: 5rem */
-  /* */
 
   h1 { 
     margin-top: 5.0rem;
@@ -159,15 +143,11 @@
   }
   
   #drinkInfo {
-    /* border:white solid 3px; */
     color: white;
   }
 
   #random-image {
-  /* border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px; */
-    /* border: white solid 3px; */
+ 
   }
 
   .tester {
