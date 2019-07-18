@@ -42,16 +42,20 @@ class MyDrink extends React.Component {
       <div className="myDrink">
         <Navbar />
         {/* <h3>Your Drink</h3> */}
-        <div className="divider"></div><span></span><span>{drink.strDrink}</span><span></span></div>
-        <h1 className="myDrink2">{drink.strDrink}</h1>
+        <div className="drinkDivider animated fadeInDown">
+          <span />
+          <span>{drink.strDrink}</span>
+          <span />
+      </div>
+      {/* <h1 className="myDrink2">{drink.strDrink}</h1> */}
         
         
         <div className="myDrinkpic">
           <div id="myDrink-img">
-            <img className="myDrink-test"src={drink.strDrinkThumb} />
+            <img className="myDrink-test animated fadeInDown"src={drink.strDrinkThumb} />
           </div>
 
-        <div className="drinkDetails">
+        <div className="drinkDetails animated fadeInDown">
           <h3>Ingredients</h3>
           {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
           <div className="drinkInstructions">

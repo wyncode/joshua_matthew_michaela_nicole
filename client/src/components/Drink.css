@@ -20,6 +20,43 @@
   text-align: center;
 } */
 
+.drinkDivider {								/* minor cosmetics */
+  display: table; 
+  font-family: 'Cinzel', serif;
+  font-size: 25px; 
+  text-align: center; 
+  width: 75%; 						/* divider width */
+  margin: 40px auto;					/* spacing above/below */
+  animation-duration: 5s;
+}
+.drinkDivider span { display: table-cell; position: relative; }
+.drinkDivider span:first-child, .drinkDivider span:last-child {
+  width: 50%;
+  top: 13px;							/* adjust vertical align */
+  -moz-background-size: 100% 2px; 	/* line width */
+  background-size: 100% 2px; 			/* line width */
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+}
+.drinkDivider span:first-child {				/* color changes in here */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(red));
+  background-image: -webkit-linear-gradient(180deg, transparent, red);
+  background-image: -moz-linear-gradient(180deg, transparent, red);
+  background-image: -o-linear-gradient(180deg, transparent, red);
+  background-image: linear-gradient(90deg, transparent, red);
+}
+.drinkDivider span:nth-child(2) {
+  color: white; padding: 0px 5px; width: auto; white-space: nowrap;
+}
+.drinkDivider span:last-child {				/* color changes in here */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(transparent));
+  background-image: -webkit-linear-gradient(180deg, red, transparent);
+  background-image: -moz-linear-gradient(180deg, red, transparent);
+  background-image: -o-linear-gradient(180deg, #000, transparent);
+  background-image: linear-gradient(90deg, red, transparent);
+}
+
+
 .myDrink2 {
   color: white;
   font-family: 'Cinzel', serif;
@@ -50,13 +87,6 @@
   border-radius: 40;
 } */
 
-.container-drink {
-  place-items: center;
-  height: 100%;
-  width: 100px;
-  font-family: 'Philosopher', sans-serif;
-}
-
 /* .drink{
   height: auto;
   width: 50px;
@@ -74,18 +104,19 @@
  /* grid-template-columns: 0.75fr 0.75fr; */
  /* place-items: center auto; */
  width: 1000px;
- margin: 50px auto;
+ margin: 50px auto 10px;
  padding: 5rem;
  background: rgba(71, 68, 68, 0.8);
  display: flex;
  justify-content: space-around;
  flex-direction: column;
  /* margin-left: 50rem; */
- 
 }
+
 .myDrink-test{
   width: 30rem !important;
   margin-bottom: 5px;
+  animation-duration: 2s;
 }
 
 .myDrink-img {
@@ -97,11 +128,11 @@
   object-fit: cover;
 }
 
-.myDrink-img{
+/* .myDrink-img{
   width: 30rem !important;
   border-radius: 30;
   margin-bottom: 10px;
-}
+} */
 
 .test-flex{
   display: flex;
@@ -120,12 +151,16 @@
   margin-bottom: auto;
   width: 20rem;
   margin: 0 auto;
+  animation-duration: 2s;
 }
 
 .drinkDetails p{
 margin-left: 3rem;  
 margin-top: .5rem;
-margin-bottom: 10px;
+margin-bottom: 5px;
+text-align: center;
+word-spacing: 2px;
+letter-spacing: 1px;
 }
 
 .drinkDetails h3{

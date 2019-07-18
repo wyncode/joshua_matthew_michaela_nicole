@@ -49,7 +49,11 @@ class RandomDrinks extends React.Component {
               <div className="body-random">
                 <div className="random-container">
                   {/* <Navbar /> */}
-                  <div className="divider"><span></span><span>{drink.strDrink}</span><span></span></div>
+                  <div className="divider">
+                    <span />
+                    <span>{drink.strDrink}</span>
+                    <span />
+                  </div>
                   {/* <h1 className="random-title">{drink.strDrink}</h1> */}
                   
                   <div className="drink">
