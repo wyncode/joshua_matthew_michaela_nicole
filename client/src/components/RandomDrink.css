@@ -89,13 +89,13 @@
 .divider span:nth-child(2) {
   color: white; padding: 0px 5px; width: auto; white-space: nowrap;
 }
-.divider span:last-child {				/* color changes in here */
+ .divider span:last-child {				/* color changes in here */
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(transparent));
   background-image: -webkit-linear-gradient(180deg, red, transparent);
   background-image: -moz-linear-gradient(180deg, red, transparent);
   background-image: -o-linear-gradient(180deg, #000, transparent);
   background-image: linear-gradient(90deg, red, transparent);
-}
+} 
 
 
 
