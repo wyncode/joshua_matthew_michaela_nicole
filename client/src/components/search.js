@@ -18,14 +18,16 @@ class SearchDrinks extends React.Component {
     userInput: ''
   };
 
+  // grabs the ingredients from the api and stores into array
   componentDidMount() {
     axios.get(`https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list`).then(response => {
       const allIngredients = response.data.drinks.map(drink => drink.strIngredient1);
       this.setState({ allIngredients });
     });
+    // removes suggestion list when turning away
     document.addEventListener('click', this.handleClickAway);
   }
-
+  // stops listening after page
   componentWillUnmount() {
     document.removeEventListener('click', this.handleClickAway);
   }
@@ -34,25 +36,18 @@ class SearchDrinks extends React.Component {
     const { className: classNames } = e.target;
     const className = classNames.split(' ')[0];
     const isInput = ['input__field', 'suggestions'];
-    console.log('is input', isInput.includes(className));
     !isInput.includes(className) && this.setState({ activeInput: '' });
   };
 
   onChange = e => {
     let parameter = e.currentTarget.name;
-    console.log(parameter);
     this.setState({ [parameter]: e.currentTarget.value });
-    console.log(`alc test: ${this.state.alcohol}`);
-    console.log(`mix test: ${this.state[parameter]}`);
-
     const userInput = e.currentTarget.value;
-    console.log(`userInput: ${userInput}`);
 
     // Filter our suggestions that don't contain the user's input
     const filteredSuggestions = this.state.allIngredients.filter(
       suggestion => suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
     );
-    console.log(filteredSuggestions);
     // Update the user input and filtered suggestions, reset the active
     // suggestion and make sure the suggestions are shown
     this.setState({
@@ -72,7 +67,6 @@ class SearchDrinks extends React.Component {
       showSuggestions: false,
       userInput: e.currentTarget.innerText
     });
-    console.log('onclicked!!!');
   };
 
   // Event fired when the user presses a key down
@@ -114,7 +108,6 @@ class SearchDrinks extends React.Component {
     const filteredSuggestions = this.state.allIngredients.filter(suggestion =>
       suggestion.toLowerCase().includes(e.target.value.toLowerCase())
     );
-    console.log(filteredSuggestions);
     // Update the user input and filtered suggestions, reset the active
     // suggestion and make sure the suggestions are shown
     this.setState({
@@ -163,7 +156,6 @@ class SearchDrinks extends React.Component {
       onKeyDown,
       state: { activeInput }
     } = this;
-    console.log('STATE', this.state);
     return (
       <div id="search">
         <h1>search</h1>
@@ -180,9 +172,7 @@ class SearchDrinks extends React.Component {
                 autoComplete="off"
                 onChange={this.handleIngredients('alcohol')}
                 onKeyDown={onKeyDown}
-                // onChange={this.handleIngredients('alcohol')}
                 value={this.state.alcohol}
-                // value={userInput}
                 onFocus={e => this.setState({ activeInput: 'alcohol' })}
                 required
               />
@@ -201,11 +191,9 @@ class SearchDrinks extends React.Component {
                 type="text"
                 name="mixer"
                 autoComplete="off"
-                // onChange={this.handleIngredients('mixer')}
                 value={this.state.mixer}
                 onChange={this.handleIngredients('mixer')}
                 onKeyDown={onKeyDown}
-                // value={userInput}
                 onFocus={e => this.setState({ activeInput: 'mixer' })}
                 required
               />
