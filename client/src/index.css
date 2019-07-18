@@ -18,7 +18,7 @@ nav {
   color: black;
   padding: 13px; 
   color: white;
-  transition: all .2s ease-in-out 
+  transition: all .2s ease-in-out;
 }
 
 .nav-item:hover {
@@ -48,6 +48,8 @@ nav ul li {
 
 }
 
+/*              Wineglass Icon CSS          */
+
 #wineglass1 {
   height: 40px;
   width: 40px;
@@ -68,19 +70,9 @@ a {
   font-size: 1.2rem;
 }
 
-a#tipsee {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.2s ease-in-out;
-
-}
-
 a.active {
   color: white;
 }
-
-button { outline: none; }
 
 /*  Social Media Icons CSS */
 

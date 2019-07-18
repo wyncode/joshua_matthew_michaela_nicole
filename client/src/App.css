@@ -1,4 +1,8 @@
-/* Home page styling */
+body {
+  margin: 0;
+}
+
+/*           Home page styling        */
 
 #home-container {
   border: white solid 0.5px;
@@ -9,10 +13,6 @@
   height: 732px;
   margin: 0;
   text-align: center;
-}
-
-body {
-  margin: 0%;
 }
 
 #Lorem-ipsum-dolor-am {
@@ -27,14 +27,10 @@ body {
   height: 156px;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 45px;
-  font-weight: light;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.2;
   letter-spacing: 0.04px;
   color: #ffffff;
   opacity: 0.8;
-  /* overflow-anchor:  */
 }
 
 #Lorem-ipsum-dolor-si {
@@ -48,11 +44,6 @@ body {
   height: 107px;
   font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
-  font-weight: light;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.46;
-  letter-spacing: 0.01px;
   color: white;
   opacity: 0.7;
 }
@@ -63,12 +54,10 @@ body {
   text-align: left;
   margin-top: 1rem;
   margin-left: 5rem;
-  outline: none;
 }
 
 #home-button {
   border-radius: 20px;
-  /* margin-left:1rem; */
   margin-top: 2rem;
   font-family: 'Raleway';
   background-color: black;
@@ -78,6 +67,7 @@ body {
   width: 130px;
   font-style: codropsicons;
   height: 30px;
+  outline: none;
 }
 
 #home-button:hover {
@@ -87,18 +77,17 @@ body {
   border: 0.7px solid white;
 }
 
+/*             Media Query CSS            */
+
 @media only screen and (max-width: 600px) {
 
   #Lorem-ipsum-dolor-am {
     margin-right: 2rem;
+  }
 
   #Lorem-ipsum-dolor-si{
     background-color: red;
     margin-right: 3rem;
-
-  }
-
-  }
 }
 
-
+}
