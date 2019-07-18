@@ -10,15 +10,25 @@ import '../components/suggestion-list.css';
 
 const Welcome = () => {
   return (
-    <div id="container">
-      <Navbar id="random-nav" />
+    // <div id="container">
 
       <div id="home-container">
-        <div id="Lorem-ipsum-dolor-am">Spruce up your date night. Make cocktails like a pro.</div>
+
+      <Navbar id="main-nav" />
+        <div id="Lorem-ipsum-dolor-am">
+          
+         <p className="home-main-text"> Spruce up your date night.
+             Make cocktails like a pro.
+          </p> 
+            
+        </div>
 
         <div id="Lorem-ipsum-dolor-si">
-          Show your special someone your drink making skills. Date night will never be the same. Go ahead. Tell us.
-          What's in your fridge?
+          <p className="homesub-text"> 
+             Show your special someone your drink making skills.
+             Date night will never be the same. Go ahead. Tell us.
+             What's in your fridge?
+         </p>
         </div>
 
         <div id="button-box">
@@ -27,7 +37,7 @@ const Welcome = () => {
           </a>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
