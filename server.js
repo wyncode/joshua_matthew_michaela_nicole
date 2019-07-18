@@ -14,13 +14,15 @@ app.get(`/drinks/:item`, (request, response) => {
       console.log(request.params.item);
       console.log('cocktail response', cocktailResponse);
       response.json(cocktailResponse.data || []);
-    });
+    })
+    .catch(e => console.error(e));
 });
 
 app.get('/random-drink', (request, response) => {
   axios
     .get(`https://www.thecocktaildb.com/api/json/v2/${process.env.API_KEY}/random.php`)
-    .then(cocktailResponse => response.json(cocktailResponse.data));
+    .then(cocktailResponse => response.json(cocktailResponse.data))
+    .catch(e => console.error(e));
 });
 
 app.get('/pages/Drink/:id', (request, response) => {

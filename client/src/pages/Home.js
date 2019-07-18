@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../components/Searching';
+import Search from '../components/Search';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
