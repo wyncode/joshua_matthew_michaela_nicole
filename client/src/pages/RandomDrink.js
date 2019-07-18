@@ -39,7 +39,7 @@ class RandomDrinks extends React.Component {
 
   render() {
     const { drink, refetch } = this.state;
-    console.log('rendering', this.state.drink);
+    //console.log('rendering', this.state.drink);
     return (
       <>
         {refetch ? (
@@ -63,7 +63,7 @@ class RandomDrinks extends React.Component {
                       <img src={drink.strDrinkThumb} alt="random-drink" />
                     </div>
 
-                    <div className="drinkInfo" className="animated fadeInDown">
+                    <div className="drinkInfo animated fadeInDown">
                       <input
                         type="button"
                         className="random-button"
@@ -74,7 +74,11 @@ class RandomDrinks extends React.Component {
                       <div className="random-ingredients">
                         <h2>Ingredients</h2>
                         {drink.ingredients &&
-                          drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
+                          drink.ingredients.map((ingredient, i) => (
+                            <p key={i} className="rand-ins">
+                              {startCase(ingredient)}
+                            </p>
+                          ))}
                       </div>
 
                       <h2>Instructions</h2>
