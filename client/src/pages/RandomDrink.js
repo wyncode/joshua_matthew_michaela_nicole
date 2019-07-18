@@ -14,32 +14,26 @@ class RandomDrinks extends React.Component {
   componentDidUpdate() {
     if (this.state.refetch) this.fetchDrinks();
   }
+
   fetchDrinks = () => {
     axios.get('/random-drink').then(response => {
       const data = response.data.drinks[0];
       const drink = Object.keys(data).reduce((acc, key) => {
         const value = data[key];
-        if (value && value !== '↵' && value.trim()) acc[key] = value;
-        return acc;
-      }, {});
-      const refetch = drink.strAlcoholic === 'Non alcoholic';
-      const ingredients = this.parseIngredient(drink);
-      this.setState({ drink: { ...drink, ...ingredients }, refetch });
-    });
-  };
-  parseIngredient = (drink = {}) =>
-    Object.keys(drink).reduce(
-      (acc, key) => {
+        if (!value || !value.trim() || value === '↵') return acc;
         if (key.includes('Ingredient')) {
           const index = key.slice(-1);
-          const ingredient = drink[key] || String();
-          const measurement = drink[`strMeasure${index}`] || '';
+          const ingredient = data[key] || '';
+          const measurement = data[`strMeasure${index}`] || '';
           acc.ingredients.push(`${measurement} ${ingredient}`.trim());
         }
+        acc[key] = value;
         return acc;
-      },
-      { ingredients: [] }
-    );
+      }, { ingredients: [] });
+      const refetch = drink.strAlcoholic === 'Non alcoholic';
+      this.setState({ drink, refetch });
+    });
+  };
 
   render() {
     const { drink, refetch } = this.state;
@@ -55,28 +49,38 @@ class RandomDrinks extends React.Component {
               <div className="body-random">
                 <div className="random-container">
                   {/* <Navbar /> */}
-
-                  <h1 className="random-title">{drink.strDrink}</h1>
-
+                  <div className="divider">
+                    <span />
+                    <span>{drink.strDrink}</span>
+                    <span />
+                  </div>
+                  {/* <h1 className="random-title">{drink.strDrink}</h1> */}
+                  
                   <div className="drink">
+                    
                     <div id="random-image">
                       <img src={drink.strDrinkThumb} alt="random-drink" />
                     </div>
-
-                    <div className="drinkInfo">
-                      <h2>Ingredients</h2>
-                      {drink.ingredients &&
-                        drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
-                      <div className="instructions">
-                        <h2>Instructions</h2>
-                        <p>{drink.strInstructions}</p>
-                        <input
-                          type="button"
-                          className="random-button"
-                          value="I'm Feeling Tipsy!"
-                          onClick={this.fetchDrinks}
+                    
+                  <div className="drinkInfo">
+                  <input
+                            type="button"
+                            className="random-button"
+                            value="Serve Me Another!"
+                            onClick={this.fetchDrinks}
                         />
-                      </div>
+                    
+                  
+                        <div className="random-ingredients"><h2>Ingredients</h2>
+                          {drink.ingredients &&
+                          drink.ingredients.map(ingredient => <p className="rand-ins">{startCase(ingredient)}</p>)}
+                        </div>
+                      
+                      
+                          <h2>Instructions</h2>
+                          <p>{drink.strInstructions}</p>
+                          
+                  
                     </div>
                   </div>
                 </div>

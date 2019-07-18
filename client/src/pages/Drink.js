@@ -20,53 +20,51 @@ class MyDrink extends React.Component {
       const data = response.data.drinks[0];
       const drink = Object.keys(data).reduce((acc, key) => {
         const value = data[key];
-        if (value && value !== '↵' && value.trim()) acc[key] = value;
-        return acc;
-      }, {});
-      const refetch = drink.strAlcoholic === 'Non alcoholic';
-      const ingredients = this.parseIngredient(drink);
-      this.setState({ drink: { ...drink, ...ingredients }, refetch });
-    });
-  };
-
-  parseIngredient = (drink = {}) =>
-    Object.keys(drink).reduce(
-      (acc, key) => {
+        if (!value || !value.trim() || value === '↵') return acc;
         if (key.includes('Ingredient')) {
           const index = key.slice(-1);
-          const ingredient = drink[key] || String();
-          const measurement = drink[`strMeasure${index}`] || '';
+          const ingredient = data[key] || '';
+          const measurement = data[`strMeasure${index}`] || '';
           acc.ingredients.push(`${measurement} ${ingredient}`.trim());
         }
+        acc[key] = value;
         return acc;
-      },
-      { ingredients: [] }
-    );
-
+      }, { ingredients: [] });
+      const refetch = drink.strAlcoholic === 'Non alcoholic';
+      this.setState({ drink, refetch });
+    });
+  };
+  
   render() {
     const { drink } = this.state;
     console.log('rendering', this.state.drink);
     return (
       <div className="myDrink">
-        <Navbar id="random-nav" />
-        <h3>Your Drink</h3>
-        <div className="drink-container">
-          <div className="myDrink">
-            <h1>{drink.strDrink}</h1>
-          </div>
-        </div>
-
+        <Navbar />
+        {/* <h3>Your Drink</h3> */}
+        <div className="drinkDivider animated fadeInDown">
+          <span />
+          <span>{drink.strDrink}</span>
+          <span />
+      </div>
+      {/* <h1 className="myDrink2">{drink.strDrink}</h1> */}
+        
+        
         <div className="myDrinkpic">
-          <img src={drink.strDrinkThumb} />
-        </div>
+          <div id="myDrink-img">
+            <img className="myDrink-test animated fadeInDown"src={drink.strDrinkThumb} />
+          </div>
 
-        <div className="drinkDetails">
+        <div className="drinkDetails animated fadeInDown">
           <h3>Ingredients</h3>
           {drink.ingredients && drink.ingredients.map(ingredient => <p>{startCase(ingredient)}</p>)}
-          <h3>Instructions</h3>
-          <p>{drink.strInstructions}</p>
+          <div className="drinkInstructions">
+            <h3>Instructions</h3>
+              <p>{drink.strInstructions}</p>
+          </div>
         </div>
       </div>
+    </div>
     );
   }
 }
