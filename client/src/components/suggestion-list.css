@@ -13,7 +13,7 @@
   max-width: 130px;
   overflow-y: auto;
   padding-left: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   position: absolute;
   background-color: whitesmoke;
   top: 54px;
@@ -28,7 +28,7 @@
 
 .suggestion-active,
 .suggestions li:hover {
-  background-color: #ec3723;
+  background-color: #eb6455;
   color: black;
   cursor: pointer;
 }

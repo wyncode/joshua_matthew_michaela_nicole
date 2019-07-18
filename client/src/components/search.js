@@ -231,7 +231,7 @@ class SearchDrinks extends React.Component {
               />
               <label className="input__label input__label--chisato">
                 <span className="input__label-content input__label-content--chisato" data-content="Garnish">
-                  Garnish Optional
+                  Garnish (Optional)
                 </span>
               </label>
               {activeInput === 'garnish' && this.renderSuggestedInputs()}

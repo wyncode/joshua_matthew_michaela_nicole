@@ -42,7 +42,6 @@
 
 .input__label {
   display: inline-block;
-  /* float: right; */
   padding: 0 1em;
   width: 40%;
   color: #696969;
@@ -107,7 +106,7 @@
 }
 
 .input__label-content--chisato {
-  padding: 0 1em;
+  padding: 0;
   font-weight: 400;
   color: #b5b5b5;
 }
