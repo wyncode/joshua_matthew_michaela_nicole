@@ -10,30 +10,24 @@ import '../components/suggestion-list.css';
 
 const Welcome = () => {
   return (
-    // <div id="container">
-
       <div id="home-container">
-
       <Navbar id="main-nav" />
         <div id="Lorem-ipsum-dolor-am">
-          
-         <p className="home-main-text"> Spruce up your date night.
+         <p className="home-main-text animated fadeInLeft"> Spruce up your date night.
              Make cocktails like a pro.
-          </p> 
-            
+          </p>  
         </div>
-
         <div id="Lorem-ipsum-dolor-si">
-          <p className="homesub-text"> 
+          <p className="homesub-text animated fadeInLeft"> 
              Show your special someone your drink making skills.
              Date night will never be the same. Go ahead. Tell us.
              What's in your fridge?
          </p>
         </div>
-
         <div id="button-box">
           <a href="#search">
-            <button id="home-button">Make a drink!</button>
+            <button className="home-button animated fadeInLeft" 
+            id="home-button">Make a drink!</button>
           </a>
         </div>
       </div>
@@ -46,9 +40,12 @@ class Home extends React.Component {
 
   getErrorMessage = () => (
     <div className="error-container">
-      <h1 className="error-message">Sorry, no drinks can be found with your ingredients</h1>
-      <img
-        src="https://www.trzcacak.rs/myfile/full/463-4632543_sad-face-transparent-clipart-png-download-sad-boys.png"
+      <h1 className="error-message">
+        Sorry, no drinks can be found with your ingredients
+        </h1>
+        <img
+        src="https://www.trzcacak.rs/myfile/full/463-4632543_sad
+        -face-transparent-clipart-png-download-sad-boys.png"
         alt="sad face"
       />
     </div>

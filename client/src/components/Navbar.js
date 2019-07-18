@@ -12,35 +12,40 @@ const Navbar = () => (
       <li>
         {' '}
         <NavLink className="nav-item" exact to="/">
-          <img src={wineglass1} id="wineglass1" alt="winebottle-icon" />{' '}
+          <img 
+          src={wineglass1} 
+          id="wineglass1" 
+          alt="winebottle-icon" />{' '}
         </NavLink>
       </li>
-
-      {/* <li>
-        <NavLink className="nav-item">Home</NavLink>
-      </li> */}
       <li>
         <NavLink className="nav-item" exact to="/Random-drink">
-          Tipsee
+          TIPSEE
         </NavLink>
       </li>
-
       <span id="nav-social">
-     
       <li>
-        
         <a className="nav-item" href="https://www.facebook.com/wyncode/">
-          <img src={facebook} id="facebook" alt="facebook-icon" />
+          <img 
+          src={facebook} 
+          id="facebook" 
+          alt="facebook-icon" />
         </a>{' '}
       </li>
       <li>
         <a className="nav-item" href="https://twitter.com/wyncode">
-          <img src={twitter} id="twitter" alt="twitter-icon" />{' '}
+          <img 
+          src={twitter} 
+          id="twitter" 
+          alt="twitter-icon" />{' '}
         </a>{' '}
       </li>
       <li>
         <a className="nav-item" href="https://www.pinterest.com/">
-          <img src={pinterest} id="pinterest" alt="pinterest-icon" />{' '}
+          <img
+          src={pinterest} 
+          id="pinterest" 
+          alt="pinterest-icon" />{' '}
         </a>{' '}
       </li>
       </span>
