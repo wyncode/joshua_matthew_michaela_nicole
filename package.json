@@ -18,5 +18,8 @@
     "build": "npm-run-all build-css build-js",
     "start": "node server.js",
     "heroku-postbuild": "cd client && yarn && yarn run build"
+  },
+  "engines": {
+    "node": "10.3.0"
   }
 }
