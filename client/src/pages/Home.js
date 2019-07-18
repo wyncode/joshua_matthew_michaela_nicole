@@ -3,30 +3,33 @@ import Search from '../components/Search';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import '../search-inputs.css';
-import '../drink-results.css';
-import '../submit-button.css';
+import '../components/search-inputs.css';
+import '../components/drink-results.css';
+import '../components/submit-button.css';
+import '../components/suggestion-list.css';
 
 const Welcome = () => {
   return (
-    <div id="container">
-      <Navbar id="random-nav" />
-
-      <div id="home-container">
-        <div id="Lorem-ipsum-dolor-am">Spruce up your date night. Make cocktails like a pro.</div>
-
-        <div id="Lorem-ipsum-dolor-si">
+    <div id="home-container">
+      <Navbar id="main-nav" />
+      <div id="Lorem-ipsum-dolor-am">
+        <p className="home-main-text animated fadeInLeft"> Spruce up your date night. Make cocktails like a pro.</p>
+      </div>
+      <div id="Lorem-ipsum-dolor-si">
+        <p className="homesub-text animated fadeInLeft">
           Show your special someone your drink making skills. Date night will never be the same. Go ahead. Tell us.
           What's in your fridge?
-        </div>
-
-        <div id="button-box">
-          <a href="#search">
-            <button id="home-button">Make a drink!</button>
-          </a>
-        </div>
+        </p>
+      </div>
+      <div id="button-box">
+        <a href="#search">
+          <button className="home-button animated fadeInLeft" id="home-button">
+            Make a drink!
+          </button>
+        </a>
       </div>
     </div>
+    // </div>
   );
 };
 
@@ -37,7 +40,8 @@ class Home extends React.Component {
     <div className="error-container">
       <h1 className="error-message">Sorry, no drinks can be found with your ingredients</h1>
       <img
-        src="https://www.trzcacak.rs/myfile/full/463-4632543_sad-face-transparent-clipart-png-download-sad-boys.png"
+        src="https://www.trzcacak.rs/myfile/full/463-4632543_sad
+        -face-transparent-clipart-png-download-sad-boys.png"
         alt="sad face"
       />
     </div>
@@ -67,7 +71,7 @@ class Home extends React.Component {
     }
   };
   render() {
-    console.log(this.state.drinks);
+    //console.log(this.state.drinks);
     return (
       <div>
         <Welcome />

@@ -3,7 +3,7 @@
   text-align: center;
   border-bottom: 1px solid #000;
   line-height: 0.1em;
-  margin: 25px 0 20px;
+  margin: 45px 0 20px;
 }
 
 #search-container h2 span {
@@ -16,12 +16,15 @@
   font-family: 'Julius Sans One', sans-serif;
   color: #353535;
 }
+#search h1 {
+  margin-top: 25px;
+}
 
 #drink-results {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  grid-gap: 40px;
   margin: 5px;
   padding: 5px;
 }
@@ -30,7 +33,7 @@
   width: 100%;
   font-size: 1.5rem;
   padding: 2px 0;
-  bottom: -32px;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #drink-results .individual-drink img {
@@ -61,5 +64,9 @@
 
 .error-container img {
   margin-top: 25px;
+  width: 40%;
+}
+.error-message {
+  padding: 25px;
   width: 50%;
 }
