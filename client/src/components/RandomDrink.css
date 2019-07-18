@@ -4,7 +4,6 @@
 }
 
 /* _______Page Loader______ */
-
 .loader {
   /* border: 10px solid #f3f3f3; */
   border-radius: 50%;
@@ -67,6 +66,7 @@
   text-align: center;
   width: 75%; /* divider width */
   margin: 40px auto; /* spacing above/below */
+  transition: all 0.5s ease-in-out;
 }
 .divider span {
   display: table-cell;
