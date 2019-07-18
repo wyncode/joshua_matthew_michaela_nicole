@@ -20,7 +20,7 @@ const Navbar = () => (
       </li>
       <li>
         <NavLink className="nav-item" exact to="/Random-drink">
-          Tipsee
+          TIPSEE
         </NavLink>
       </li>
       <span id="nav-social">
