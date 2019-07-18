@@ -1,31 +1,32 @@
 .myDrink {
   background-image: url('../images/bar-drinks2.jpg');
   background-size: cover;
-  background-image: repeat;
+  /* background-image: repeat; */
   display: grid;
-  height: 100vh;
+  height: 100% !important;
 }
 
-h3 {
+/* h3 {
   font-family: 'Philosopher', sans-serif;
   font-size: 1.1em;
   margin-left: 55px;
   margin-top: 20px;
-}
+} */
 
-.container {
+/* .container {
   font-family: 'Philosopher', sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
-}
+} */
 
 .myDrink2 {
   color: white;
   font-family: 'Cinzel', serif;
   font-size: 3rem;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 /* h1 { 
@@ -56,7 +57,6 @@ h3 {
   font-family: 'Philosopher', sans-serif;
 }
 
-
 /* .drink{
   height: auto;
   width: 50px;
@@ -69,37 +69,84 @@ h3 {
 } */
 
 .myDrinkpic {
- display: grid;
+ /* display: grid; */
  text-align: center;
- grid-template-columns: 0.75fr 0.75fr;
- place-items: center auto;
+ /* grid-template-columns: 0.75fr 0.75fr; */
+ /* place-items: center auto; */
  width: 1000px;
  margin: 50px auto;
  padding: 5rem;
  background: rgba(71, 68, 68, 0.8);
+ display: flex;
+ justify-content: space-around;
+ flex-direction: column;
+ /* margin-left: 50rem; */
+ 
+}
+.myDrink-test{
+  width: 30rem !important;
+  margin-bottom: 5px;
 }
 
-.myDrinkpic img {
+.myDrink-img {
   border-radius: 5px;
   margin-top: 50px;
   margin-left: 80px;
   height: 600px;
-  width: 500px;
+  /* width: 500px; */
   object-fit: cover;
+}
+
+.myDrink-img{
+  width: 30rem !important;
+  border-radius: 30;
+  margin-bottom: 10px;
+}
+
+.test-flex{
+  display: flex;
+  flex-direction: column;
 }
 
 .drinkDetails {
   color: white;
   text-align: left;
+  /* margin-left: 5rem; */
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 20rem;
+  margin: 0 auto;
+}
+
+.drinkDetails p{
+margin-left: 3rem;  
+margin-top: .5rem;
+margin-bottom: 10px;
+}
+
+.drinkDetails h3{
+  margin-left: 3rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+
+/* .drinkDetails {
+  color: white;
+  text-align: left;
   margin-left: 5rem;
-  /* float: right;
+  float: right;
   position: relative;
-  /* place-content: right; */
+  place-content: right; 
   margin-top: -15px;
   margin-left: 100px;
   margin-bottom: 100px;
-} */
+}  */
 
-.drinkDetails h3 {
+/* .drinkDetails h3 {
   margin-top: -30px;
-}
+} */

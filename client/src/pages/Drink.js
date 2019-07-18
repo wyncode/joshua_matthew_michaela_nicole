@@ -41,14 +41,15 @@ class MyDrink extends React.Component {
     return (
       <div className="myDrink">
         <Navbar />
-        <h3>Your Drink</h3>
-      
+        {/* <h3>Your Drink</h3> */}
+        <div className="divider"></div><span></span><span>{drink.strDrink}</span><span></span></div>
         <h1 className="myDrink2">{drink.strDrink}</h1>
-
+        
+        
         <div className="myDrinkpic">
-          <div id="myDrink img">
-            <img src={drink.strDrinkThumb} />
-        </div>
+          <div id="myDrink-img">
+            <img className="myDrink-test"src={drink.strDrinkThumb} />
+          </div>
 
         <div className="drinkDetails">
           <h3>Ingredients</h3>
